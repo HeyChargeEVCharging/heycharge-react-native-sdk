@@ -1,0 +1,38 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.heychargesdkexample.app-mergeDebugResources-39:/values-v16/values-v16.xml",
+            "map": [
+                {
+                    "source": "/Users/muhammad/.gradle/caches/transforms-3/1b40e4574e76bff5831ef4bf4270480d/transformed/appcompat-1.4.1/res/values-v16/values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "5",
+                        "endColumns": "12",
+                        "endOffsets": "223"
+                    },
+                    "to": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "121",
+                        "endLines": "6",
+                        "endColumns": "12",
+                        "endOffsets": "289"
+                    }
+                },
+                {
+                    "source": "/Users/muhammad/.gradle/caches/transforms-3/0442dcddf7c8962f91c947e4fa892631/transformed/core-1.9.0/res/values-v16/values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "65",
+                        "endOffsets": "116"
+                    }
+                }
+            ]
+        }
+    ]
+}

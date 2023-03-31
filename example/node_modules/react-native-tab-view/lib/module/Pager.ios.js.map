@@ -1,0 +1,1 @@
+{"version":3,"names":["default"],"sources":["Pager.ios.tsx"],"sourcesContent":["export { default } from './PagerViewAdapter';\n"],"mappings":"AAAA,SAASA,OAAT,QAAwB,oBAAxB"}

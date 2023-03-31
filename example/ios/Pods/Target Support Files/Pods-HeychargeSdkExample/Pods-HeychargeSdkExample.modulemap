@@ -1,0 +1,6 @@
+module Pods_HeychargeSdkExample {
+  umbrella header "Pods-HeychargeSdkExample-umbrella.h"
+
+  export *
+  module * { export * }
+}
