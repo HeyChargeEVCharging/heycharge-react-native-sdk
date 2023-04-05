@@ -9,13 +9,9 @@ npm install heycharge-sdk
 ```
 
 ## Usage
-
+To fully utilize the capabilities of the HeyCharge SDK, we highly recommend referring to our comprehensive SDK documentation available at the following link. It contains detailed information and technical specifications that will enable you to seamlessly integrate the SDK into your React Native application and leverage its full potential.
 ```js
-import { multiply } from 'heycharge-sdk';
-
-// ...
-
-const result = await multiply(3, 7);
+https://developer.heycharge.com/sdk
 ```
 
 ## Contributing
