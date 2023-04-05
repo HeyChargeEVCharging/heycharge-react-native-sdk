@@ -18,8 +18,7 @@ class HeychargeSdk: RCTEventEmitter {
     }
     
     @objc func setUserId(_ userId: String) -> Void {
-        //TODO: remove static userId
-        HeyChargeSDK.setUserId(userId: "HWDYhoOQVCaYRKcfZSQ0vv9Sxtq1")
+        HeyChargeSDK.setUserId(userId: userId)
     }
     
     @objc func observeChargers() {

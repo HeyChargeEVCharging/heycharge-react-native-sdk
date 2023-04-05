@@ -21,12 +21,10 @@ class AdminScreen extends Component {
   };
 
   componentDidMount() {
-    console.log('admin componentDidMount');
     this.chargersEventListener = HeyCharge.observeChargers(this.callback);
   }
 
   componentWillUnmount() {
-    console.log('admin componentWillUnmount');
     this.chargersEventListener?.remove();
     this.otaEventListener?.remove();
     HeyCharge.removeChargersObserver(this.callback);

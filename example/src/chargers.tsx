@@ -25,14 +25,12 @@ class ChargersScreen extends Component {
   };
 
   componentDidMount() {
-    console.log('chargers componentDidMount');
     this.chargersEventListener = HeyCharge.observeChargers(
       this.chargersCallback
     );
   }
 
   componentWillUnmount() {
-    console.log('chargers componentWillUnmount');
     HeyCharge.removeChargersObserver(this.chargersCallback);
     this.chargersEventListener?.remove();
   }
