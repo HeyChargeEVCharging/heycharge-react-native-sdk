@@ -1,10 +1,16 @@
 import React, { Component } from 'react';
 
-import { View, Text, FlatList, EmitterSubscription, Button } from 'react-native';
-import * as HeyCharge from 'heycharge-sdk';
-import DatePicker from 'react-native-date-picker'
+import {
+  View,
+  Text,
+  FlatList,
+  EmitterSubscription,
+  Button,
+} from 'react-native';
+import * as HeyCharge from '@HeyChargeEVCharging/heycharge-react-native-sdk';
+import DatePicker from 'react-native-date-picker';
 import Card from './card'
-import type { Session } from 'heycharge-sdk';
+import type { Session } from '@HeyChargeEVCharging/heycharge-react-native-sdk';
 
 class SessionsScreen extends Component {
   state = { sessions: [], showPicker: false, period: new Date() };

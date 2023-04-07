@@ -9,7 +9,7 @@ import {
   useWindowDimensions,
 } from 'react-native';
 import { TabView, SceneMap } from 'react-native-tab-view';
-import * as HeyCharge from 'heycharge-sdk';
+import * as HeyCharge from '@HeyChargeEVCharging/heycharge-react-native-sdk';
 import ChargersScreen from './chargers';
 import SessionsScreen from './sessions';
 import AdminScreen from './admin';

@@ -2970,8 +2970,8 @@
 		46EB2E00019800 /* HeychargeSdk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E0000B430 /* HeychargeSdk.swift */; };
 		46EB2E00019810 /* RNCharger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E0000B440 /* RNCharger.swift */; };
 		46EB2E00019820 /* HeychargeSdk-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = 46EB2E0000B410 /* HeychargeSdk-Bridging-Header.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		46EB2E00019880 /* heycharge-sdk-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 46EB2E00019870 /* heycharge-sdk-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		46EB2E000198C0 /* heycharge-sdk-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E000198B0 /* heycharge-sdk-dummy.m */; };
+		46EB2E00019880 /* heycharge-react-native-sdk-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 46EB2E00019870 /* heycharge-react-native-sdk-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		46EB2E000198C0 /* heycharge-react-native-sdk-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E000198B0 /* heycharge-react-native-sdk-dummy.m */; };
 		46EB2E00019950 /* buffer.c in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E0000B610 /* buffer.c */; };
 		46EB2E00019960 /* bufferevent.c in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E0000B620 /* bufferevent.c */; };
 		46EB2E00019970 /* bufferevent_filter.c in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E0000B630 /* bufferevent_filter.c */; };
@@ -3444,8 +3444,8 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 46EB2E00000000 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 576116784FAF78BD33E793FCC236AD54;
-			remoteInfo = "heycharge-sdk";
+			remoteGlobalIDString = 750C6EA12266B79240664619DCB18D8F;
+			remoteInfo = "heycharge-react-native-sdk";
 		};
 		46EB2E0001AC60 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -3850,8 +3850,8 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 46EB2E00000000 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 576116784FAF78BD33E793FCC236AD54;
-			remoteInfo = "heycharge-sdk";
+			remoteGlobalIDString = 750C6EA12266B79240664619DCB18D8F;
+			remoteInfo = "heycharge-react-native-sdk";
 		};
 		46EB2E0001B3A0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -7915,7 +7915,7 @@
 		46EB2E0000BEC0 /* Yoga.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = Yoga.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		46EB2E0000BEE0 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		46EB2E0000BEF0 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		46EB2E0000BF00 /* heycharge-sdk.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = "heycharge-sdk.podspec"; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		46EB2E0000BF00 /* heycharge-react-native-sdk.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = "heycharge-react-native-sdk.podspec"; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		46EB2E0000BF20 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		46EB2E0000BF30 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		46EB2E0000BF40 /* react-native-date-picker.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = "react-native-date-picker.podspec"; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -8132,12 +8132,12 @@
 		46EB2E00019740 /* hermes-engine-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "hermes-engine-xcframeworks.sh"; sourceTree = "<group>"; };
 		46EB2E00019750 /* hermes-engine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "hermes-engine.debug.xcconfig"; sourceTree = "<group>"; };
 		46EB2E00019760 /* hermes-engine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "hermes-engine.release.xcconfig"; sourceTree = "<group>"; };
-		46EB2E00019840 /* heycharge-sdk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "heycharge-sdk.debug.xcconfig"; sourceTree = "<group>"; };
-		46EB2E00019850 /* heycharge-sdk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "heycharge-sdk.release.xcconfig"; sourceTree = "<group>"; };
-		46EB2E00019860 /* heycharge-sdk.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "heycharge-sdk.modulemap"; sourceTree = "<group>"; };
-		46EB2E00019870 /* heycharge-sdk-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "heycharge-sdk-umbrella.h"; sourceTree = "<group>"; };
-		46EB2E000198A0 /* heycharge-sdk-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "heycharge-sdk-prefix.pch"; sourceTree = "<group>"; };
-		46EB2E000198B0 /* heycharge-sdk-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "heycharge-sdk-dummy.m"; sourceTree = "<group>"; };
+		46EB2E00019840 /* heycharge-react-native-sdk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "heycharge-react-native-sdk.debug.xcconfig"; sourceTree = "<group>"; };
+		46EB2E00019850 /* heycharge-react-native-sdk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "heycharge-react-native-sdk.release.xcconfig"; sourceTree = "<group>"; };
+		46EB2E00019860 /* heycharge-react-native-sdk.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "heycharge-react-native-sdk.modulemap"; sourceTree = "<group>"; };
+		46EB2E00019870 /* heycharge-react-native-sdk-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "heycharge-react-native-sdk-umbrella.h"; sourceTree = "<group>"; };
+		46EB2E000198A0 /* heycharge-react-native-sdk-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "heycharge-react-native-sdk-prefix.pch"; sourceTree = "<group>"; };
+		46EB2E000198B0 /* heycharge-react-native-sdk-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "heycharge-react-native-sdk-dummy.m"; sourceTree = "<group>"; };
 		46EB2E00019C90 /* libevent.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = libevent.debug.xcconfig; sourceTree = "<group>"; };
 		46EB2E00019CA0 /* libevent.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = libevent.release.xcconfig; sourceTree = "<group>"; };
 		46EB2E00019CB0 /* libevent-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "libevent-prefix.pch"; sourceTree = "<group>"; };
@@ -8177,7 +8177,6 @@
 		46EB2E0001A540 /* Pods-HeychargeSdkExample-HeychargeSdkExampleTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-HeychargeSdkExample-HeychargeSdkExampleTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		46EB2E0001A550 /* Pods-HeychargeSdkExample-HeychargeSdkExampleTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HeychargeSdkExample-HeychargeSdkExampleTests-dummy.m"; sourceTree = "<group>"; };
 		50B5347C9A6E93B7D4CFC3673BA6FB7E /* RNScreens */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = RNScreens; path = libRNScreens.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		523F154929C9E22300973DB0 /* Combine.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Combine.framework; path = System/Library/Frameworks/Combine.framework; sourceTree = SDKROOT; };
 		52EAF1124A3C62232E15615B7D9A6507 /* react-native-simple-toast */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "react-native-simple-toast"; path = "libreact-native-simple-toast.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52FCF98CEFF94C742080B6965D537AD0 /* react-native-safe-area-context */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "react-native-safe-area-context"; path = "libreact-native-safe-area-context.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		55E0AFD333353D71ACC2207149E879D6 /* Toast */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = Toast; path = libToast.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -8187,13 +8186,13 @@
 		666E72807891C591E025A75410CD2A26 /* React-perflogger */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "React-perflogger"; path = "libReact-perflogger.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6771D231F4C8C5976470A369C474B32E /* React-CoreModules */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "React-CoreModules"; path = "libReact-CoreModules.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		68D0E680E3D787063C2716E812E2A5AE /* React-bridging */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "React-bridging"; path = "libReact-bridging.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6AB4C89B7EF232CECA19DA6FA0C622C1 /* libheycharge-sdk.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libheycharge-sdk.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CBEFE4F9E22AFDC6347A739BB35FF8C /* CocoaAsyncSocket */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = CocoaAsyncSocket; path = libCocoaAsyncSocket.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FFB7B2992BB53405E6B771A5BA1E97D /* DoubleConversion */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = DoubleConversion; path = libDoubleConversion.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		778C1572AE22EE933ACA12594B6DF949 /* RNPermissions */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = RNPermissions; path = libRNPermissions.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		802121F5B756ACBFDD6D08C36246DADD /* React-RCTLinking */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "React-RCTLinking"; path = "libReact-RCTLinking.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		808C120D3DDB6F7D6525236969239FB2 /* Permission-BluetoothPeripheral */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "Permission-BluetoothPeripheral"; path = "libPermission-BluetoothPeripheral.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		85A01882ED06DFEA2E0CE78BCDB204A7 /* SocketRocket */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = SocketRocket; path = libSocketRocket.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E051A2C821B77E0DB0011528FA0103A /* heycharge-react-native-sdk */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "heycharge-react-native-sdk"; path = "libheycharge-react-native-sdk.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FD3DD8368ED4B6E773ABAA49C117D42 /* Flipper-Boost-iOSX */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "Flipper-Boost-iOSX"; path = "libFlipper-Boost-iOSX.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		99D5CD245388DC76AAEF6E1E351A90ED /* Flipper-Folly */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "Flipper-Folly"; path = "libFlipper-Folly.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5B49761F8D1EB12585DD45CAA2E489F /* React-logger */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "React-logger"; path = "libReact-logger.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -8593,7 +8592,7 @@
 				65234B3E668A42D9137B2C7AB051EE37 /* FlipperKit */,
 				F4BDA69E3BCB0166D49FB679ABADCA00 /* fmt */,
 				3CA7A9404CCDD6BA22C97F8348CE3209 /* glog */,
-				6AB4C89B7EF232CECA19DA6FA0C622C1 /* libheycharge-sdk.a */,
+				8E051A2C821B77E0DB0011528FA0103A /* heycharge-react-native-sdk */,
 				FB6FAD8F0183E86ACBFBD8A81BA7BF3A /* libevent */,
 				808C120D3DDB6F7D6525236969239FB2 /* Permission-BluetoothPeripheral */,
 				D7E3DE3AB3712B75ECDFA634FD7D9AC6 /* Pods-HeychargeSdkExample */,
@@ -8638,7 +8637,6 @@
 		46EB2E00000060 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				523F154929C9E22300973DB0 /* Combine.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -8685,7 +8683,7 @@
 			children = (
 				46EB2E000000D0 /* FBLazyVector */,
 				46EB2E000000E0 /* FBReactNativeSpec */,
-				46EB2E000003F0 /* heycharge-sdk */,
+				46EB2E000003F0 /* heycharge-react-native-sdk */,
 				46EB2E00000190 /* Permission-BluetoothPeripheral */,
 				46EB2E000001B0 /* RCTRequired */,
 				46EB2E000001C0 /* RCTTypeSafety */,
@@ -10940,7 +10938,7 @@
 			path = "hermes-engine";
 			sourceTree = "<group>";
 		};
-		46EB2E000003F0 /* heycharge-sdk */ = {
+		46EB2E000003F0 /* heycharge-react-native-sdk */ = {
 			isa = PBXGroup;
 			children = (
 				46EB2E0000B420 /* HeychargeSdk.m */,
@@ -10950,7 +10948,7 @@
 				46EB2E0000BED0 /* Pod */,
 				46EB2E00019830 /* Support Files */,
 			);
-			name = "heycharge-sdk";
+			name = "heycharge-react-native-sdk";
 			path = ../../..;
 			sourceTree = "<group>";
 		};
@@ -13018,7 +13016,7 @@
 		46EB2E0000BED0 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				46EB2E0000BF00 /* heycharge-sdk.podspec */,
+				46EB2E0000BF00 /* heycharge-react-native-sdk.podspec */,
 				46EB2E0000BEE0 /* LICENSE */,
 				46EB2E0000BEF0 /* README.md */,
 			);
@@ -13688,15 +13686,15 @@
 		46EB2E00019830 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				46EB2E00019860 /* heycharge-sdk.modulemap */,
-				46EB2E000198B0 /* heycharge-sdk-dummy.m */,
-				46EB2E000198A0 /* heycharge-sdk-prefix.pch */,
-				46EB2E00019870 /* heycharge-sdk-umbrella.h */,
-				46EB2E00019840 /* heycharge-sdk.debug.xcconfig */,
-				46EB2E00019850 /* heycharge-sdk.release.xcconfig */,
+				46EB2E00019860 /* heycharge-react-native-sdk.modulemap */,
+				46EB2E000198B0 /* heycharge-react-native-sdk-dummy.m */,
+				46EB2E000198A0 /* heycharge-react-native-sdk-prefix.pch */,
+				46EB2E00019870 /* heycharge-react-native-sdk-umbrella.h */,
+				46EB2E00019840 /* heycharge-react-native-sdk.debug.xcconfig */,
+				46EB2E00019850 /* heycharge-react-native-sdk.release.xcconfig */,
 			);
 			name = "Support Files";
-			path = "example/ios/Pods/Target Support Files/heycharge-sdk";
+			path = "example/ios/Pods/Target Support Files/heycharge-react-native-sdk";
 			sourceTree = "<group>";
 		};
 		46EB2E00019C80 /* Support Files */ = {
@@ -16057,7 +16055,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46EB2E00019880 /* heycharge-sdk-umbrella.h in Headers */,
+				46EB2E00019880 /* heycharge-react-native-sdk-umbrella.h in Headers */,
 				46EB2E00019820 /* HeychargeSdk-Bridging-Header.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -16475,27 +16473,6 @@
 			productReference = C1A919103EAC9813D236486C34FC0A21 /* React-RCTVibration */;
 			productType = "com.apple.product-type.library.static";
 		};
-		576116784FAF78BD33E793FCC236AD54 /* heycharge-sdk */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 46EB2E00019780 /* Build configuration list for PBXNativeTarget "heycharge-sdk" */;
-			buildPhases = (
-				46EB2E000197C0 /* Headers */,
-				46EB2E000197D0 /* Sources */,
-				46EB2E000197E0 /* Frameworks */,
-				46EB2E00019890 /* Copy generated compatibility header */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				46EB2E0001C770 /* PBXTargetDependency */,
-			);
-			name = "heycharge-sdk";
-			packageProductDependencies = (
-			);
-			productName = "heycharge-sdk";
-			productReference = 6AB4C89B7EF232CECA19DA6FA0C622C1 /* libheycharge-sdk.a */;
-			productType = "com.apple.product-type.library.static";
-		};
 		5D49FA97D16E84D298A7C7F5A6F1D615 /* React-bridging */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 46EB2E000179A0 /* Build configuration list for PBXNativeTarget "React-bridging" */;
@@ -16639,6 +16616,27 @@
 			name = "Flipper-PeerTalk";
 			productName = "Flipper-PeerTalk";
 			productReference = ACBB7F62B267CC7C9BBBAE41DE94743B /* Flipper-PeerTalk */;
+			productType = "com.apple.product-type.library.static";
+		};
+		750C6EA12266B79240664619DCB18D8F /* heycharge-react-native-sdk */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 46EB2E00019780 /* Build configuration list for PBXNativeTarget "heycharge-react-native-sdk" */;
+			buildPhases = (
+				46EB2E000197C0 /* Headers */,
+				46EB2E000197D0 /* Sources */,
+				46EB2E000197E0 /* Frameworks */,
+				46EB2E00019890 /* Copy generated compatibility header */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				46EB2E0001C770 /* PBXTargetDependency */,
+			);
+			name = "heycharge-react-native-sdk";
+			packageProductDependencies = (
+			);
+			productName = "heycharge-react-native-sdk";
+			productReference = 8E051A2C821B77E0DB0011528FA0103A /* heycharge-react-native-sdk */;
 			productType = "com.apple.product-type.library.static";
 		};
 		7A020DAB6F3F0BA0A6D9946E84B38B7F /* React-Core-AccessibilityResources */ = {
@@ -17303,7 +17301,7 @@
 				02B79DFED924FA19CA90EC69614733E1 /* fmt */,
 				D0EFEFB685D97280256C559792236873 /* glog */,
 				985FEA01F314F3C00F0C1E1181E6C4A5 /* hermes-engine */,
-				576116784FAF78BD33E793FCC236AD54 /* heycharge-sdk */,
+				750C6EA12266B79240664619DCB18D8F /* heycharge-react-native-sdk */,
 				04A30E186743192DFB26B0FD7DB8F250 /* libevent */,
 				B9ED5194E665042005069EF06C82A050 /* OpenSSL-Universal */,
 				33A15E1BE86AE4E37A94810E850B43AB /* Permission-BluetoothPeripheral */,
@@ -17396,20 +17394,20 @@
 			);
 			inputPaths = (
 				"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h",
-				"${PODS_ROOT}/Headers/Public/heycharge_sdk/heycharge-sdk.modulemap",
-				"${PODS_ROOT}/Headers/Public/heycharge_sdk/heycharge-sdk-umbrella.h",
+				"${PODS_ROOT}/Headers/Public/heycharge_react_native_sdk/heycharge-react-native-sdk.modulemap",
+				"${PODS_ROOT}/Headers/Public/heycharge_react_native_sdk/heycharge-react-native-sdk-umbrella.h",
 			);
 			name = "Copy generated compatibility header";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap",
-				"${BUILT_PRODUCTS_DIR}/heycharge-sdk-umbrella.h",
+				"${BUILT_PRODUCTS_DIR}/heycharge-react-native-sdk-umbrella.h",
 				"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "COMPATIBILITY_HEADER_PATH=\"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h\"\nMODULE_MAP_PATH=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap\"\n\nditto \"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h\" \"${COMPATIBILITY_HEADER_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/heycharge_sdk/heycharge-sdk.modulemap\" \"${MODULE_MAP_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/heycharge_sdk/heycharge-sdk-umbrella.h\" \"${BUILT_PRODUCTS_DIR}\"\nprintf \"\\n\\nmodule ${PRODUCT_MODULE_NAME}.Swift {\\n  header \\\"${COMPATIBILITY_HEADER_PATH}\\\"\\n  requires objc\\n}\\n\" >> \"${MODULE_MAP_PATH}\"\n";
+			shellScript = "COMPATIBILITY_HEADER_PATH=\"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h\"\nMODULE_MAP_PATH=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap\"\n\nditto \"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h\" \"${COMPATIBILITY_HEADER_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/heycharge_react_native_sdk/heycharge-react-native-sdk.modulemap\" \"${MODULE_MAP_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/heycharge_react_native_sdk/heycharge-react-native-sdk-umbrella.h\" \"${BUILT_PRODUCTS_DIR}\"\nprintf \"\\n\\nmodule ${PRODUCT_MODULE_NAME}.Swift {\\n  header \\\"${COMPATIBILITY_HEADER_PATH}\\\"\\n  requires objc\\n}\\n\" >> \"${MODULE_MAP_PATH}\"\n";
 		};
 		46EB2E0001A570 /* [CP-User] Generate Specs */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -18694,7 +18692,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46EB2E000198C0 /* heycharge-sdk-dummy.m in Sources */,
+				46EB2E000198C0 /* heycharge-react-native-sdk-dummy.m in Sources */,
 				46EB2E000197F0 /* HeychargeSdk.m in Sources */,
 				46EB2E00019800 /* HeychargeSdk.swift in Sources */,
 				46EB2E00019810 /* RNCharger.swift in Sources */,
@@ -19118,8 +19116,8 @@
 		};
 		46EB2E0001AC50 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = "heycharge-sdk";
-			target = 576116784FAF78BD33E793FCC236AD54 /* heycharge-sdk */;
+			name = "heycharge-react-native-sdk";
+			target = 750C6EA12266B79240664619DCB18D8F /* heycharge-react-native-sdk */;
 			targetProxy = 46EB2E0001AC40 /* PBXContainerItemProxy */;
 		};
 		46EB2E0001AC70 /* PBXTargetDependency */ = {
@@ -19466,8 +19464,8 @@
 		};
 		46EB2E0001B390 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = "heycharge-sdk";
-			target = 576116784FAF78BD33E793FCC236AD54 /* heycharge-sdk */;
+			name = "heycharge-react-native-sdk";
+			target = 750C6EA12266B79240664619DCB18D8F /* heycharge-react-native-sdk */;
 			targetProxy = 46EB2E0001B380 /* PBXContainerItemProxy */;
 		};
 		46EB2E0001B3B0 /* PBXTargetDependency */ = {
@@ -20535,7 +20533,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -20600,7 +20598,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -23549,25 +23547,25 @@
 		};
 		46EB2E00019790 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 46EB2E00019850 /* heycharge-sdk.release.xcconfig */;
+			baseConfigurationReference = 46EB2E00019850 /* heycharge-react-native-sdk.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/heycharge-sdk/heycharge-sdk-prefix.pch";
+				GCC_PREFIX_HEADER = "Target Support Files/heycharge-react-native-sdk/heycharge-react-native-sdk-prefix.pch";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(PODS_ROOT)/Headers/Private/React-bridging/react/bridging\"",
 					"\"$(PODS_CONFIGURATION_BUILD_DIR)/React-bridging/react_bridging.framework/Headers\"",
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				MODULEMAP_FILE = "Headers/Public/heycharge_sdk/heycharge-sdk.modulemap";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MODULEMAP_FILE = "Headers/Public/heycharge_react_native_sdk/heycharge-react-native-sdk.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = heycharge_sdk;
-				PRODUCT_NAME = "heycharge-sdk";
+				PRODUCT_MODULE_NAME = heycharge_react_native_sdk;
+				PRODUCT_NAME = "heycharge-react-native-sdk";
 				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -23580,25 +23578,25 @@
 		};
 		46EB2E000197A0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 46EB2E00019840 /* heycharge-sdk.debug.xcconfig */;
+			baseConfigurationReference = 46EB2E00019840 /* heycharge-react-native-sdk.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/heycharge-sdk/heycharge-sdk-prefix.pch";
+				GCC_PREFIX_HEADER = "Target Support Files/heycharge-react-native-sdk/heycharge-react-native-sdk-prefix.pch";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(PODS_ROOT)/Headers/Private/React-bridging/react/bridging\"",
 					"\"$(PODS_CONFIGURATION_BUILD_DIR)/React-bridging/react_bridging.framework/Headers\"",
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				MODULEMAP_FILE = "Headers/Public/heycharge_sdk/heycharge-sdk.modulemap";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MODULEMAP_FILE = "Headers/Public/heycharge_react_native_sdk/heycharge-react-native-sdk.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = heycharge_sdk;
-				PRODUCT_NAME = "heycharge-sdk";
+				PRODUCT_MODULE_NAME = heycharge_react_native_sdk;
+				PRODUCT_NAME = "heycharge-react-native-sdk";
 				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -24478,7 +24476,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		46EB2E00019780 /* Build configuration list for PBXNativeTarget "heycharge-sdk" */ = {
+		46EB2E00019780 /* Build configuration list for PBXNativeTarget "heycharge-react-native-sdk" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				46EB2E000197A0 /* Debug */,

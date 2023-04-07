@@ -8,7 +8,7 @@ import type { Charger, RNCharger, Session } from 'src/interfaces';
 
 //TODO: check why proxy was causing issues in iOS.
 const LINKING_ERROR =
-  `The package 'heycharge-sdk' doesn't seem to be linked. Make sure: \n\n` +
+  `The package 'heycharge-react-native-sdk' doesn't seem to be linked. Make sure: \n\n` +
   Platform.select({ ios: "- You have run 'pod install'\n", default: '' }) +
   '- You rebuilt the app after installing the package\n' +
   '- You are not using Expo Go\n';

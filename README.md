@@ -1,11 +1,11 @@
-# heycharge-sdk
+# heycharge-react-native-sdk
 
 The mobile HeyCharge SDK for React Native platform
 
 ## Installation
 
 ```sh
-npm install heycharge-sdk
+npm install @heychargeevcharging/heycharge-react-native-sdk@latest
 ```
 
 ## Usage

@@ -1,8 +1,8 @@
 {
   "name": "heycharge-sdk",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "summary": "test",
-  "homepage": "https://gitlab.com/heycharge/react-native-sdk#readme",
+  "homepage": "https://github.com/HeyChargeEVCharging/heycharge-react-native-sdk#readme",
   "license": "MIT",
   "authors": "HeyCharge GmbH <chris@heycharge.com> (https://www.heycharge.com)",
   "platforms": {
@@ -10,7 +10,7 @@
   },
   "source": {
     "git": "https://gitlab.com/heycharge/react-native-sdk.git",
-    "tag": "0.1.0"
+    "tag": "0.1.1"
   },
   "source_files": "ios/**/*.{h,m,mm,swift}",
   "dependencies": {

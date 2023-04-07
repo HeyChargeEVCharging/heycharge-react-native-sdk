@@ -7,9 +7,13 @@ import {
   Button,
   EmitterSubscription,
 } from 'react-native';
-import * as HeyCharge from 'heycharge-sdk';
+import * as HeyCharge from '@HeyChargeEVCharging/heycharge-react-native-sdk';
 import Card from './card';
-import { type RNCharger, type Charger, ChargerState } from 'heycharge-sdk';
+import {
+  type RNCharger,
+  type Charger,
+  ChargerState,
+} from '@HeyChargeEVCharging/heycharge-react-native-sdk';
 
 class AdminScreen extends Component {
   state = { chargers: [], otaProgress: 0 };

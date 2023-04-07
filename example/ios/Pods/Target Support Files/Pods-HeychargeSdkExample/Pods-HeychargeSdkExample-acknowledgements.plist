@@ -1528,7 +1528,7 @@ SOFTWARE.
 			<key>License</key>
 			<string>MIT</string>
 			<key>Title</key>
-			<string>heycharge-sdk</string>
+			<string>heycharge-react-native-sdk</string>
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
 		</dict>
