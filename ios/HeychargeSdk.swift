@@ -48,7 +48,7 @@ class HeychargeSdk: RCTEventEmitter {
                         let jsonString = String(data: jsonData, encoding: .utf8)
                         if let jsonString = jsonString {
                             //TODO: remove after fixing in iOS SDK
-                            var modifiedJsonString = jsonString.replacingOccurrences(of: "bluetoothStatus", with: "bluetoothState")
+                            let modifiedJsonString = jsonString.replacingOccurrences(of: "bluetoothStatus", with: "bluetoothState")
                             rnChargers.append(modifiedJsonString)
                         }
                     } catch {

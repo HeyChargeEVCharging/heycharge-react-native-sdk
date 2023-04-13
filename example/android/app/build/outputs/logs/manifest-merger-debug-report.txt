@@ -1,19 +1,19 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/muhammad/Desktop/dev/heycharge/react-native-sdk/example/android/app/src/main/AndroidManifest.xml:1:1-26:12
-INJECTED from /Users/muhammad/Desktop/dev/heycharge/react-native-sdk/example/android/app/src/main/AndroidManifest.xml:1:1-26:12
-INJECTED from /Users/muhammad/Desktop/dev/heycharge/react-native-sdk/example/android/app/src/main/AndroidManifest.xml:1:1-26:12
-INJECTED from /Users/muhammad/Desktop/dev/heycharge/react-native-sdk/example/android/app/src/main/AndroidManifest.xml:1:1-26:12
-MERGED from /Users/muhammad/Desktop/dev/heycharge/react-native-sdk/example/android/app/src/main/AndroidManifest.xml:1:1-26:12
+ADDED from /Users/muhammad/Desktop/dev/heycharge/heycharge-react-native-sdk/example/android/app/src/main/AndroidManifest.xml:1:1-26:12
+INJECTED from /Users/muhammad/Desktop/dev/heycharge/heycharge-react-native-sdk/example/android/app/src/main/AndroidManifest.xml:1:1-26:12
+INJECTED from /Users/muhammad/Desktop/dev/heycharge/heycharge-react-native-sdk/example/android/app/src/main/AndroidManifest.xml:1:1-26:12
+INJECTED from /Users/muhammad/Desktop/dev/heycharge/heycharge-react-native-sdk/example/android/app/src/main/AndroidManifest.xml:1:1-26:12
+MERGED from /Users/muhammad/Desktop/dev/heycharge/heycharge-react-native-sdk/example/android/app/src/main/AndroidManifest.xml:1:1-26:12
 MERGED from [com.facebook.flipper:flipper:0.125.0] /Users/muhammad/.gradle/caches/transforms-3/03f04a3f11198ce3b7c6cedb9b41266b/transformed/jetified-flipper-0.125.0/AndroidManifest.xml:8:1-18:12
 MERGED from [com.facebook.flipper:flipper-network-plugin:0.125.0] /Users/muhammad/.gradle/caches/transforms-3/e32b7eeb3398efff4e100fae60e161ae/transformed/jetified-flipper-network-plugin-0.125.0/AndroidManifest.xml:8:1-15:12
 MERGED from [com.facebook.flipper:flipper-fresco-plugin:0.125.0] /Users/muhammad/.gradle/caches/transforms-3/d00cb5af49214c127447117a850c65b4/transformed/jetified-flipper-fresco-plugin-0.125.0/AndroidManifest.xml:8:1-15:12
-MERGED from [:heycharge-sdk] /Users/muhammad/Desktop/dev/heycharge/react-native-sdk/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
-MERGED from [:react-native-date-picker] /Users/muhammad/Desktop/dev/heycharge/react-native-sdk/example/node_modules/react-native-date-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
-MERGED from [:react-native-pager-view] /Users/muhammad/Desktop/dev/heycharge/react-native-sdk/example/node_modules/react-native-pager-view/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
-MERGED from [:react-native-permissions] /Users/muhammad/Desktop/dev/heycharge/react-native-sdk/example/node_modules/react-native-permissions/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
-MERGED from [:react-native-safe-area-context] /Users/muhammad/Desktop/dev/heycharge/react-native-sdk/example/node_modules/react-native-safe-area-context/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
-MERGED from [:react-native-screens] /Users/muhammad/Desktop/dev/heycharge/react-native-sdk/example/node_modules/react-native-screens/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
+MERGED from [:HeyChargeEVCharging_heycharge-react-native-sdk] /Users/muhammad/Desktop/dev/heycharge/heycharge-react-native-sdk/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
+MERGED from [:react-native-date-picker] /Users/muhammad/Desktop/dev/heycharge/heycharge-react-native-sdk/example/node_modules/react-native-date-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
+MERGED from [:react-native-pager-view] /Users/muhammad/Desktop/dev/heycharge/heycharge-react-native-sdk/example/node_modules/react-native-pager-view/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
+MERGED from [:react-native-permissions] /Users/muhammad/Desktop/dev/heycharge/heycharge-react-native-sdk/example/node_modules/react-native-permissions/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
+MERGED from [:react-native-safe-area-context] /Users/muhammad/Desktop/dev/heycharge/heycharge-react-native-sdk/example/node_modules/react-native-safe-area-context/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
+MERGED from [:react-native-screens] /Users/muhammad/Desktop/dev/heycharge/heycharge-react-native-sdk/example/node_modules/react-native-screens/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [com.facebook.react:react-native:0.70.6] /Users/muhammad/.gradle/caches/transforms-3/0b825f9a3cd84cf1738e48fbfed11fea/transformed/jetified-react-native-0.70.6-debug/AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/muhammad/.gradle/caches/transforms-3/4aa3daa4c119e5ebf154ad11d072f485/transformed/swiperefreshlayout-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [com.facebook.react:hermes-engine:0.70.6] /Users/muhammad/.gradle/caches/transforms-3/9d7eb90167c45c49ac02b1539a4fe443/transformed/jetified-hermes-engine-0.70.6-debug/AndroidManifest.xml:2:1-9:12
@@ -34,7 +34,7 @@ MERGED from [com.facebook.fresco:nativeimagetranscoder:2.6.0] /Users/muhammad/.g
 MERGED from [com.facebook.fresco:imagepipeline-base:2.6.0] /Users/muhammad/.gradle/caches/transforms-3/1d1edd6ff4f1a69fd6c2a9b7b9361b66/transformed/jetified-imagepipeline-base-2.6.0/AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.android.material:material:1.1.0] /Users/muhammad/.gradle/caches/transforms-3/ff7f9e1ea9c2e709fffb9e018f2252cf/transformed/material-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.appcompat:appcompat:1.4.1] /Users/muhammad/.gradle/caches/transforms-3/1b40e4574e76bff5831ef4bf4270480d/transformed/appcompat-1.4.1/AndroidManifest.xml:17:1-24:12
-MERGED from [com.heycharge:android-sdk:0.0.3] /Users/muhammad/.gradle/caches/transforms-3/b6966a5d8cfcfe472866f76729f7ce8a/transformed/jetified-android-sdk-0.0.3/AndroidManifest.xml:2:1-16:12
+MERGED from [com.heycharge:android-sdk:0.0.0.4] /Users/muhammad/.gradle/caches/transforms-3/1a22b23be3e0a90ee735d335e63a39a4/transformed/jetified-android-sdk-0.0.0.4/AndroidManifest.xml:2:1-16:12
 MERGED from [androidx.work:work-runtime-ktx:2.7.1] /Users/muhammad/.gradle/caches/transforms-3/e0139d190b8bdf3ebab06d0040ef9ca6/transformed/work-runtime-ktx-2.7.1/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.work:work-runtime:2.7.1] /Users/muhammad/.gradle/caches/transforms-3/3bc811facf50ede55bc8298072e0374d/transformed/work-runtime-2.7.1/AndroidManifest.xml:17:1-145:12
 MERGED from [androidx.room:room-runtime:2.5.0] /Users/muhammad/.gradle/caches/transforms-3/045cfa40ed2a174d6b183008270cc381/transformed/room-runtime-2.5.0/AndroidManifest.xml:17:1-31:12
@@ -82,38 +82,38 @@ MERGED from [androidx.annotation:annotation-experimental:1.3.0] /Users/muhammad/
 MERGED from [com.github.henninghall:numberpickerview:v1.1.5] /Users/muhammad/.gradle/caches/transforms-3/9b30bb2ac9392326984e629bec4936dc/transformed/jetified-numberpickerview-v1.1.5/AndroidManifest.xml:2:1-11:12
 MERGED from [net.time4j:time4j-android:4.8-2021a] /Users/muhammad/.gradle/caches/transforms-3/c19b4058e4af20c34268b7b0e48d5683/transformed/jetified-time4j-android-4.8-2021a/AndroidManifest.xml:2:1-13:12
 MERGED from [com.facebook.fresco:fbcore:2.6.0] /Users/muhammad/.gradle/caches/transforms-3/fe525e62d2b9e85c0d777a0bb14f7298/transformed/jetified-fbcore-2.6.0/AndroidManifest.xml:2:1-9:12
-INJECTED from /Users/muhammad/Desktop/dev/heycharge/react-native-sdk/example/android/app/src/debug/AndroidManifest.xml:2:1-13:12
-INJECTED from /Users/muhammad/Desktop/dev/heycharge/react-native-sdk/example/android/app/src/debug/AndroidManifest.xml:2:1-13:12
-INJECTED from /Users/muhammad/Desktop/dev/heycharge/react-native-sdk/example/android/app/src/debug/AndroidManifest.xml:2:1-13:12
+INJECTED from /Users/muhammad/Desktop/dev/heycharge/heycharge-react-native-sdk/example/android/app/src/debug/AndroidManifest.xml:2:1-13:12
+INJECTED from /Users/muhammad/Desktop/dev/heycharge/heycharge-react-native-sdk/example/android/app/src/debug/AndroidManifest.xml:2:1-13:12
+INJECTED from /Users/muhammad/Desktop/dev/heycharge/heycharge-react-native-sdk/example/android/app/src/debug/AndroidManifest.xml:2:1-13:12
 	package
-		ADDED from /Users/muhammad/Desktop/dev/heycharge/react-native-sdk/example/android/app/src/main/AndroidManifest.xml:2:3-36
-		INJECTED from /Users/muhammad/Desktop/dev/heycharge/react-native-sdk/example/android/app/src/main/AndroidManifest.xml
-		ADDED from /Users/muhammad/Desktop/dev/heycharge/react-native-sdk/example/android/app/src/main/AndroidManifest.xml:2:3-36
-		INJECTED from /Users/muhammad/Desktop/dev/heycharge/react-native-sdk/example/android/app/src/debug/AndroidManifest.xml
+		ADDED from /Users/muhammad/Desktop/dev/heycharge/heycharge-react-native-sdk/example/android/app/src/main/AndroidManifest.xml:2:3-36
+		INJECTED from /Users/muhammad/Desktop/dev/heycharge/heycharge-react-native-sdk/example/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/muhammad/Desktop/dev/heycharge/heycharge-react-native-sdk/example/android/app/src/main/AndroidManifest.xml:2:3-36
+		INJECTED from /Users/muhammad/Desktop/dev/heycharge/heycharge-react-native-sdk/example/android/app/src/debug/AndroidManifest.xml
 	android:versionName
-		INJECTED from /Users/muhammad/Desktop/dev/heycharge/react-native-sdk/example/android/app/src/main/AndroidManifest.xml
-		ADDED from /Users/muhammad/Desktop/dev/heycharge/react-native-sdk/example/android/app/src/main/AndroidManifest.xml:1:1-26:12
-		INJECTED from /Users/muhammad/Desktop/dev/heycharge/react-native-sdk/example/android/app/src/debug/AndroidManifest.xml
+		INJECTED from /Users/muhammad/Desktop/dev/heycharge/heycharge-react-native-sdk/example/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/muhammad/Desktop/dev/heycharge/heycharge-react-native-sdk/example/android/app/src/main/AndroidManifest.xml:1:1-26:12
+		INJECTED from /Users/muhammad/Desktop/dev/heycharge/heycharge-react-native-sdk/example/android/app/src/debug/AndroidManifest.xml
 	xmlns:tools
-		ADDED from /Users/muhammad/Desktop/dev/heycharge/react-native-sdk/example/android/app/src/debug/AndroidManifest.xml:3:5-51
+		ADDED from /Users/muhammad/Desktop/dev/heycharge/heycharge-react-native-sdk/example/android/app/src/debug/AndroidManifest.xml:3:5-51
 	android:versionCode
-		INJECTED from /Users/muhammad/Desktop/dev/heycharge/react-native-sdk/example/android/app/src/main/AndroidManifest.xml
-		ADDED from /Users/muhammad/Desktop/dev/heycharge/react-native-sdk/example/android/app/src/main/AndroidManifest.xml:1:1-26:12
-		INJECTED from /Users/muhammad/Desktop/dev/heycharge/react-native-sdk/example/android/app/src/debug/AndroidManifest.xml
+		INJECTED from /Users/muhammad/Desktop/dev/heycharge/heycharge-react-native-sdk/example/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/muhammad/Desktop/dev/heycharge/heycharge-react-native-sdk/example/android/app/src/main/AndroidManifest.xml:1:1-26:12
+		INJECTED from /Users/muhammad/Desktop/dev/heycharge/heycharge-react-native-sdk/example/android/app/src/debug/AndroidManifest.xml
 	xmlns:android
-		ADDED from /Users/muhammad/Desktop/dev/heycharge/react-native-sdk/example/android/app/src/main/AndroidManifest.xml:1:11-69
+		ADDED from /Users/muhammad/Desktop/dev/heycharge/heycharge-react-native-sdk/example/android/app/src/main/AndroidManifest.xml:1:11-69
 uses-permission#android.permission.INTERNET
-ADDED from /Users/muhammad/Desktop/dev/heycharge/react-native-sdk/example/android/app/src/main/AndroidManifest.xml:4:5-67
+ADDED from /Users/muhammad/Desktop/dev/heycharge/heycharge-react-native-sdk/example/android/app/src/main/AndroidManifest.xml:4:5-67
 MERGED from [com.facebook.flipper:flipper:0.125.0] /Users/muhammad/.gradle/caches/transforms-3/03f04a3f11198ce3b7c6cedb9b41266b/transformed/jetified-flipper-0.125.0/AndroidManifest.xml:15:5-67
 MERGED from [com.facebook.flipper:flipper:0.125.0] /Users/muhammad/.gradle/caches/transforms-3/03f04a3f11198ce3b7c6cedb9b41266b/transformed/jetified-flipper-0.125.0/AndroidManifest.xml:15:5-67
-MERGED from [com.heycharge:android-sdk:0.0.3] /Users/muhammad/.gradle/caches/transforms-3/b6966a5d8cfcfe472866f76729f7ce8a/transformed/jetified-android-sdk-0.0.3/AndroidManifest.xml:13:5-67
-MERGED from [com.heycharge:android-sdk:0.0.3] /Users/muhammad/.gradle/caches/transforms-3/b6966a5d8cfcfe472866f76729f7ce8a/transformed/jetified-android-sdk-0.0.3/AndroidManifest.xml:13:5-67
+MERGED from [com.heycharge:android-sdk:0.0.0.4] /Users/muhammad/.gradle/caches/transforms-3/1a22b23be3e0a90ee735d335e63a39a4/transformed/jetified-android-sdk-0.0.0.4/AndroidManifest.xml:13:5-67
+MERGED from [com.heycharge:android-sdk:0.0.0.4] /Users/muhammad/.gradle/caches/transforms-3/1a22b23be3e0a90ee735d335e63a39a4/transformed/jetified-android-sdk-0.0.0.4/AndroidManifest.xml:13:5-67
 	android:name
-		ADDED from /Users/muhammad/Desktop/dev/heycharge/react-native-sdk/example/android/app/src/main/AndroidManifest.xml:4:22-64
+		ADDED from /Users/muhammad/Desktop/dev/heycharge/heycharge-react-native-sdk/example/android/app/src/main/AndroidManifest.xml:4:22-64
 application
-ADDED from /Users/muhammad/Desktop/dev/heycharge/react-native-sdk/example/android/app/src/main/AndroidManifest.xml:6:5-25:19
-MERGED from /Users/muhammad/Desktop/dev/heycharge/react-native-sdk/example/android/app/src/main/AndroidManifest.xml:6:5-25:19
-MERGED from /Users/muhammad/Desktop/dev/heycharge/react-native-sdk/example/android/app/src/main/AndroidManifest.xml:6:5-25:19
+ADDED from /Users/muhammad/Desktop/dev/heycharge/heycharge-react-native-sdk/example/android/app/src/main/AndroidManifest.xml:6:5-25:19
+MERGED from /Users/muhammad/Desktop/dev/heycharge/heycharge-react-native-sdk/example/android/app/src/main/AndroidManifest.xml:6:5-25:19
+MERGED from /Users/muhammad/Desktop/dev/heycharge/heycharge-react-native-sdk/example/android/app/src/main/AndroidManifest.xml:6:5-25:19
 MERGED from [com.facebook.react:react-native:0.70.6] /Users/muhammad/.gradle/caches/transforms-3/0b825f9a3cd84cf1738e48fbfed11fea/transformed/jetified-react-native-0.70.6-debug/AndroidManifest.xml:9:5-20
 MERGED from [com.facebook.react:react-native:0.70.6] /Users/muhammad/.gradle/caches/transforms-3/0b825f9a3cd84cf1738e48fbfed11fea/transformed/jetified-react-native-0.70.6-debug/AndroidManifest.xml:9:5-20
 MERGED from [com.facebook.soloader:soloader:0.10.4] /Users/muhammad/.gradle/caches/transforms-3/87826452408345e9fcde9828ee0fb34c/transformed/jetified-soloader-0.10.4/AndroidManifest.xml:11:5-20
@@ -139,75 +139,75 @@ MERGED from [net.time4j:time4j-android:4.8-2021a] /Users/muhammad/.gradle/caches
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.9.0] /Users/muhammad/.gradle/caches/transforms-3/0442dcddf7c8962f91c947e4fa892631/transformed/core-1.9.0/AndroidManifest.xml:28:18-86
 	android:label
-		ADDED from /Users/muhammad/Desktop/dev/heycharge/react-native-sdk/example/android/app/src/main/AndroidManifest.xml:8:7-39
-		ADDED from /Users/muhammad/Desktop/dev/heycharge/react-native-sdk/example/android/app/src/main/AndroidManifest.xml:8:7-39
+		ADDED from /Users/muhammad/Desktop/dev/heycharge/heycharge-react-native-sdk/example/android/app/src/main/AndroidManifest.xml:8:7-39
+		ADDED from /Users/muhammad/Desktop/dev/heycharge/heycharge-react-native-sdk/example/android/app/src/main/AndroidManifest.xml:8:7-39
 	tools:ignore
-		ADDED from /Users/muhammad/Desktop/dev/heycharge/react-native-sdk/example/android/app/src/debug/AndroidManifest.xml:10:9-48
+		ADDED from /Users/muhammad/Desktop/dev/heycharge/heycharge-react-native-sdk/example/android/app/src/debug/AndroidManifest.xml:10:9-48
 	android:roundIcon
-		ADDED from /Users/muhammad/Desktop/dev/heycharge/react-native-sdk/example/android/app/src/main/AndroidManifest.xml:10:7-52
-		ADDED from /Users/muhammad/Desktop/dev/heycharge/react-native-sdk/example/android/app/src/main/AndroidManifest.xml:10:7-52
+		ADDED from /Users/muhammad/Desktop/dev/heycharge/heycharge-react-native-sdk/example/android/app/src/main/AndroidManifest.xml:10:7-52
+		ADDED from /Users/muhammad/Desktop/dev/heycharge/heycharge-react-native-sdk/example/android/app/src/main/AndroidManifest.xml:10:7-52
 	tools:targetApi
-		ADDED from /Users/muhammad/Desktop/dev/heycharge/react-native-sdk/example/android/app/src/debug/AndroidManifest.xml:9:9-29
+		ADDED from /Users/muhammad/Desktop/dev/heycharge/heycharge-react-native-sdk/example/android/app/src/debug/AndroidManifest.xml:9:9-29
 	android:icon
-		ADDED from /Users/muhammad/Desktop/dev/heycharge/react-native-sdk/example/android/app/src/main/AndroidManifest.xml:9:7-41
-		ADDED from /Users/muhammad/Desktop/dev/heycharge/react-native-sdk/example/android/app/src/main/AndroidManifest.xml:9:7-41
+		ADDED from /Users/muhammad/Desktop/dev/heycharge/heycharge-react-native-sdk/example/android/app/src/main/AndroidManifest.xml:9:7-41
+		ADDED from /Users/muhammad/Desktop/dev/heycharge/heycharge-react-native-sdk/example/android/app/src/main/AndroidManifest.xml:9:7-41
 	android:allowBackup
-		ADDED from /Users/muhammad/Desktop/dev/heycharge/react-native-sdk/example/android/app/src/main/AndroidManifest.xml:11:7-34
-		ADDED from /Users/muhammad/Desktop/dev/heycharge/react-native-sdk/example/android/app/src/main/AndroidManifest.xml:11:7-34
+		ADDED from /Users/muhammad/Desktop/dev/heycharge/heycharge-react-native-sdk/example/android/app/src/main/AndroidManifest.xml:11:7-34
+		ADDED from /Users/muhammad/Desktop/dev/heycharge/heycharge-react-native-sdk/example/android/app/src/main/AndroidManifest.xml:11:7-34
 	android:theme
-		ADDED from /Users/muhammad/Desktop/dev/heycharge/react-native-sdk/example/android/app/src/main/AndroidManifest.xml:12:7-38
-		ADDED from /Users/muhammad/Desktop/dev/heycharge/react-native-sdk/example/android/app/src/main/AndroidManifest.xml:12:7-38
+		ADDED from /Users/muhammad/Desktop/dev/heycharge/heycharge-react-native-sdk/example/android/app/src/main/AndroidManifest.xml:12:7-38
+		ADDED from /Users/muhammad/Desktop/dev/heycharge/heycharge-react-native-sdk/example/android/app/src/main/AndroidManifest.xml:12:7-38
 	android:usesCleartextTraffic
-		ADDED from /Users/muhammad/Desktop/dev/heycharge/react-native-sdk/example/android/app/src/debug/AndroidManifest.xml:8:9-44
+		ADDED from /Users/muhammad/Desktop/dev/heycharge/heycharge-react-native-sdk/example/android/app/src/debug/AndroidManifest.xml:8:9-44
 	android:name
-		ADDED from /Users/muhammad/Desktop/dev/heycharge/react-native-sdk/example/android/app/src/main/AndroidManifest.xml:7:7-38
-		ADDED from /Users/muhammad/Desktop/dev/heycharge/react-native-sdk/example/android/app/src/main/AndroidManifest.xml:7:7-38
+		ADDED from /Users/muhammad/Desktop/dev/heycharge/heycharge-react-native-sdk/example/android/app/src/main/AndroidManifest.xml:7:7-38
+		ADDED from /Users/muhammad/Desktop/dev/heycharge/heycharge-react-native-sdk/example/android/app/src/main/AndroidManifest.xml:7:7-38
 activity#com.heychargesdkexample.MainActivity
-ADDED from /Users/muhammad/Desktop/dev/heycharge/react-native-sdk/example/android/app/src/main/AndroidManifest.xml:13:7-24:18
+ADDED from /Users/muhammad/Desktop/dev/heycharge/heycharge-react-native-sdk/example/android/app/src/main/AndroidManifest.xml:13:7-24:18
 	android:label
-		ADDED from /Users/muhammad/Desktop/dev/heycharge/react-native-sdk/example/android/app/src/main/AndroidManifest.xml:15:9-41
+		ADDED from /Users/muhammad/Desktop/dev/heycharge/heycharge-react-native-sdk/example/android/app/src/main/AndroidManifest.xml:15:9-41
 	android:launchMode
-		ADDED from /Users/muhammad/Desktop/dev/heycharge/react-native-sdk/example/android/app/src/main/AndroidManifest.xml:17:9-40
+		ADDED from /Users/muhammad/Desktop/dev/heycharge/heycharge-react-native-sdk/example/android/app/src/main/AndroidManifest.xml:17:9-40
 	android:windowSoftInputMode
-		ADDED from /Users/muhammad/Desktop/dev/heycharge/react-native-sdk/example/android/app/src/main/AndroidManifest.xml:18:9-51
+		ADDED from /Users/muhammad/Desktop/dev/heycharge/heycharge-react-native-sdk/example/android/app/src/main/AndroidManifest.xml:18:9-51
 	android:exported
-		ADDED from /Users/muhammad/Desktop/dev/heycharge/react-native-sdk/example/android/app/src/main/AndroidManifest.xml:19:9-32
+		ADDED from /Users/muhammad/Desktop/dev/heycharge/heycharge-react-native-sdk/example/android/app/src/main/AndroidManifest.xml:19:9-32
 	android:configChanges
-		ADDED from /Users/muhammad/Desktop/dev/heycharge/react-native-sdk/example/android/app/src/main/AndroidManifest.xml:16:9-118
+		ADDED from /Users/muhammad/Desktop/dev/heycharge/heycharge-react-native-sdk/example/android/app/src/main/AndroidManifest.xml:16:9-118
 	android:name
-		ADDED from /Users/muhammad/Desktop/dev/heycharge/react-native-sdk/example/android/app/src/main/AndroidManifest.xml:14:9-37
+		ADDED from /Users/muhammad/Desktop/dev/heycharge/heycharge-react-native-sdk/example/android/app/src/main/AndroidManifest.xml:14:9-37
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Users/muhammad/Desktop/dev/heycharge/react-native-sdk/example/android/app/src/main/AndroidManifest.xml:20:9-23:25
+ADDED from /Users/muhammad/Desktop/dev/heycharge/heycharge-react-native-sdk/example/android/app/src/main/AndroidManifest.xml:20:9-23:25
 action#android.intent.action.MAIN
-ADDED from /Users/muhammad/Desktop/dev/heycharge/react-native-sdk/example/android/app/src/main/AndroidManifest.xml:21:13-65
+ADDED from /Users/muhammad/Desktop/dev/heycharge/heycharge-react-native-sdk/example/android/app/src/main/AndroidManifest.xml:21:13-65
 	android:name
-		ADDED from /Users/muhammad/Desktop/dev/heycharge/react-native-sdk/example/android/app/src/main/AndroidManifest.xml:21:21-62
+		ADDED from /Users/muhammad/Desktop/dev/heycharge/heycharge-react-native-sdk/example/android/app/src/main/AndroidManifest.xml:21:21-62
 category#android.intent.category.LAUNCHER
-ADDED from /Users/muhammad/Desktop/dev/heycharge/react-native-sdk/example/android/app/src/main/AndroidManifest.xml:22:13-73
+ADDED from /Users/muhammad/Desktop/dev/heycharge/heycharge-react-native-sdk/example/android/app/src/main/AndroidManifest.xml:22:13-73
 	android:name
-		ADDED from /Users/muhammad/Desktop/dev/heycharge/react-native-sdk/example/android/app/src/main/AndroidManifest.xml:22:23-70
+		ADDED from /Users/muhammad/Desktop/dev/heycharge/heycharge-react-native-sdk/example/android/app/src/main/AndroidManifest.xml:22:23-70
 uses-sdk
-INJECTED from /Users/muhammad/Desktop/dev/heycharge/react-native-sdk/example/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from /Users/muhammad/Desktop/dev/heycharge/react-native-sdk/example/android/app/src/main/AndroidManifest.xml
-INJECTED from /Users/muhammad/Desktop/dev/heycharge/react-native-sdk/example/android/app/src/main/AndroidManifest.xml
+INJECTED from /Users/muhammad/Desktop/dev/heycharge/heycharge-react-native-sdk/example/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/muhammad/Desktop/dev/heycharge/heycharge-react-native-sdk/example/android/app/src/main/AndroidManifest.xml
+INJECTED from /Users/muhammad/Desktop/dev/heycharge/heycharge-react-native-sdk/example/android/app/src/main/AndroidManifest.xml
 MERGED from [com.facebook.flipper:flipper:0.125.0] /Users/muhammad/.gradle/caches/transforms-3/03f04a3f11198ce3b7c6cedb9b41266b/transformed/jetified-flipper-0.125.0/AndroidManifest.xml:11:5-13:41
 MERGED from [com.facebook.flipper:flipper:0.125.0] /Users/muhammad/.gradle/caches/transforms-3/03f04a3f11198ce3b7c6cedb9b41266b/transformed/jetified-flipper-0.125.0/AndroidManifest.xml:11:5-13:41
 MERGED from [com.facebook.flipper:flipper-network-plugin:0.125.0] /Users/muhammad/.gradle/caches/transforms-3/e32b7eeb3398efff4e100fae60e161ae/transformed/jetified-flipper-network-plugin-0.125.0/AndroidManifest.xml:11:5-13:41
 MERGED from [com.facebook.flipper:flipper-network-plugin:0.125.0] /Users/muhammad/.gradle/caches/transforms-3/e32b7eeb3398efff4e100fae60e161ae/transformed/jetified-flipper-network-plugin-0.125.0/AndroidManifest.xml:11:5-13:41
 MERGED from [com.facebook.flipper:flipper-fresco-plugin:0.125.0] /Users/muhammad/.gradle/caches/transforms-3/d00cb5af49214c127447117a850c65b4/transformed/jetified-flipper-fresco-plugin-0.125.0/AndroidManifest.xml:11:5-13:41
 MERGED from [com.facebook.flipper:flipper-fresco-plugin:0.125.0] /Users/muhammad/.gradle/caches/transforms-3/d00cb5af49214c127447117a850c65b4/transformed/jetified-flipper-fresco-plugin-0.125.0/AndroidManifest.xml:11:5-13:41
-MERGED from [:heycharge-sdk] /Users/muhammad/Desktop/dev/heycharge/react-native-sdk/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
-MERGED from [:heycharge-sdk] /Users/muhammad/Desktop/dev/heycharge/react-native-sdk/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
-MERGED from [:react-native-date-picker] /Users/muhammad/Desktop/dev/heycharge/react-native-sdk/example/node_modules/react-native-date-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
-MERGED from [:react-native-date-picker] /Users/muhammad/Desktop/dev/heycharge/react-native-sdk/example/node_modules/react-native-date-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
-MERGED from [:react-native-pager-view] /Users/muhammad/Desktop/dev/heycharge/react-native-sdk/example/node_modules/react-native-pager-view/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
-MERGED from [:react-native-pager-view] /Users/muhammad/Desktop/dev/heycharge/react-native-sdk/example/node_modules/react-native-pager-view/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
-MERGED from [:react-native-permissions] /Users/muhammad/Desktop/dev/heycharge/react-native-sdk/example/node_modules/react-native-permissions/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
-MERGED from [:react-native-permissions] /Users/muhammad/Desktop/dev/heycharge/react-native-sdk/example/node_modules/react-native-permissions/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
-MERGED from [:react-native-safe-area-context] /Users/muhammad/Desktop/dev/heycharge/react-native-sdk/example/node_modules/react-native-safe-area-context/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
-MERGED from [:react-native-safe-area-context] /Users/muhammad/Desktop/dev/heycharge/react-native-sdk/example/node_modules/react-native-safe-area-context/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
-MERGED from [:react-native-screens] /Users/muhammad/Desktop/dev/heycharge/react-native-sdk/example/node_modules/react-native-screens/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
-MERGED from [:react-native-screens] /Users/muhammad/Desktop/dev/heycharge/react-native-sdk/example/node_modules/react-native-screens/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:HeyChargeEVCharging_heycharge-react-native-sdk] /Users/muhammad/Desktop/dev/heycharge/heycharge-react-native-sdk/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:HeyChargeEVCharging_heycharge-react-native-sdk] /Users/muhammad/Desktop/dev/heycharge/heycharge-react-native-sdk/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-date-picker] /Users/muhammad/Desktop/dev/heycharge/heycharge-react-native-sdk/example/node_modules/react-native-date-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-date-picker] /Users/muhammad/Desktop/dev/heycharge/heycharge-react-native-sdk/example/node_modules/react-native-date-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-pager-view] /Users/muhammad/Desktop/dev/heycharge/heycharge-react-native-sdk/example/node_modules/react-native-pager-view/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-pager-view] /Users/muhammad/Desktop/dev/heycharge/heycharge-react-native-sdk/example/node_modules/react-native-pager-view/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-permissions] /Users/muhammad/Desktop/dev/heycharge/heycharge-react-native-sdk/example/node_modules/react-native-permissions/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-permissions] /Users/muhammad/Desktop/dev/heycharge/heycharge-react-native-sdk/example/node_modules/react-native-permissions/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-safe-area-context] /Users/muhammad/Desktop/dev/heycharge/heycharge-react-native-sdk/example/node_modules/react-native-safe-area-context/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-safe-area-context] /Users/muhammad/Desktop/dev/heycharge/heycharge-react-native-sdk/example/node_modules/react-native-safe-area-context/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-screens] /Users/muhammad/Desktop/dev/heycharge/heycharge-react-native-sdk/example/node_modules/react-native-screens/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-screens] /Users/muhammad/Desktop/dev/heycharge/heycharge-react-native-sdk/example/node_modules/react-native-screens/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.react:react-native:0.70.6] /Users/muhammad/.gradle/caches/transforms-3/0b825f9a3cd84cf1738e48fbfed11fea/transformed/jetified-react-native-0.70.6-debug/AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.react:react-native:0.70.6] /Users/muhammad/.gradle/caches/transforms-3/0b825f9a3cd84cf1738e48fbfed11fea/transformed/jetified-react-native-0.70.6-debug/AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/muhammad/.gradle/caches/transforms-3/4aa3daa4c119e5ebf154ad11d072f485/transformed/swiperefreshlayout-1.0.0/AndroidManifest.xml:20:5-44
@@ -248,8 +248,8 @@ MERGED from [com.google.android.material:material:1.1.0] /Users/muhammad/.gradle
 MERGED from [com.google.android.material:material:1.1.0] /Users/muhammad/.gradle/caches/transforms-3/ff7f9e1ea9c2e709fffb9e018f2252cf/transformed/material-1.1.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.appcompat:appcompat:1.4.1] /Users/muhammad/.gradle/caches/transforms-3/1b40e4574e76bff5831ef4bf4270480d/transformed/appcompat-1.4.1/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.appcompat:appcompat:1.4.1] /Users/muhammad/.gradle/caches/transforms-3/1b40e4574e76bff5831ef4bf4270480d/transformed/appcompat-1.4.1/AndroidManifest.xml:20:5-22:41
-MERGED from [com.heycharge:android-sdk:0.0.3] /Users/muhammad/.gradle/caches/transforms-3/b6966a5d8cfcfe472866f76729f7ce8a/transformed/jetified-android-sdk-0.0.3/AndroidManifest.xml:5:5-7:41
-MERGED from [com.heycharge:android-sdk:0.0.3] /Users/muhammad/.gradle/caches/transforms-3/b6966a5d8cfcfe472866f76729f7ce8a/transformed/jetified-android-sdk-0.0.3/AndroidManifest.xml:5:5-7:41
+MERGED from [com.heycharge:android-sdk:0.0.0.4] /Users/muhammad/.gradle/caches/transforms-3/1a22b23be3e0a90ee735d335e63a39a4/transformed/jetified-android-sdk-0.0.0.4/AndroidManifest.xml:5:5-7:41
+MERGED from [com.heycharge:android-sdk:0.0.0.4] /Users/muhammad/.gradle/caches/transforms-3/1a22b23be3e0a90ee735d335e63a39a4/transformed/jetified-android-sdk-0.0.0.4/AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.work:work-runtime-ktx:2.7.1] /Users/muhammad/.gradle/caches/transforms-3/e0139d190b8bdf3ebab06d0040ef9ca6/transformed/work-runtime-ktx-2.7.1/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.work:work-runtime-ktx:2.7.1] /Users/muhammad/.gradle/caches/transforms-3/e0139d190b8bdf3ebab06d0040ef9ca6/transformed/work-runtime-ktx-2.7.1/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.work:work-runtime:2.7.1] /Users/muhammad/.gradle/caches/transforms-3/3bc811facf50ede55bc8298072e0374d/transformed/work-runtime-2.7.1/AndroidManifest.xml:21:5-23:41
@@ -344,48 +344,48 @@ MERGED from [net.time4j:time4j-android:4.8-2021a] /Users/muhammad/.gradle/caches
 MERGED from [net.time4j:time4j-android:4.8-2021a] /Users/muhammad/.gradle/caches/transforms-3/c19b4058e4af20c34268b7b0e48d5683/transformed/jetified-time4j-android-4.8-2021a/AndroidManifest.xml:7:5-9:41
 MERGED from [com.facebook.fresco:fbcore:2.6.0] /Users/muhammad/.gradle/caches/transforms-3/fe525e62d2b9e85c0d777a0bb14f7298/transformed/jetified-fbcore-2.6.0/AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.fresco:fbcore:2.6.0] /Users/muhammad/.gradle/caches/transforms-3/fe525e62d2b9e85c0d777a0bb14f7298/transformed/jetified-fbcore-2.6.0/AndroidManifest.xml:5:5-7:41
-INJECTED from /Users/muhammad/Desktop/dev/heycharge/react-native-sdk/example/android/app/src/debug/AndroidManifest.xml
-INJECTED from /Users/muhammad/Desktop/dev/heycharge/react-native-sdk/example/android/app/src/debug/AndroidManifest.xml
+INJECTED from /Users/muhammad/Desktop/dev/heycharge/heycharge-react-native-sdk/example/android/app/src/debug/AndroidManifest.xml
+INJECTED from /Users/muhammad/Desktop/dev/heycharge/heycharge-react-native-sdk/example/android/app/src/debug/AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from /Users/muhammad/Desktop/dev/heycharge/react-native-sdk/example/android/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/muhammad/Desktop/dev/heycharge/react-native-sdk/example/android/app/src/debug/AndroidManifest.xml
+		INJECTED from /Users/muhammad/Desktop/dev/heycharge/heycharge-react-native-sdk/example/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/muhammad/Desktop/dev/heycharge/heycharge-react-native-sdk/example/android/app/src/debug/AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from /Users/muhammad/Desktop/dev/heycharge/react-native-sdk/example/android/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/muhammad/Desktop/dev/heycharge/react-native-sdk/example/android/app/src/debug/AndroidManifest.xml
+		INJECTED from /Users/muhammad/Desktop/dev/heycharge/heycharge-react-native-sdk/example/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/muhammad/Desktop/dev/heycharge/heycharge-react-native-sdk/example/android/app/src/debug/AndroidManifest.xml
 uses-permission#android.permission.SYSTEM_ALERT_WINDOW
-ADDED from /Users/muhammad/Desktop/dev/heycharge/react-native-sdk/example/android/app/src/debug/AndroidManifest.xml:5:5-77
+ADDED from /Users/muhammad/Desktop/dev/heycharge/heycharge-react-native-sdk/example/android/app/src/debug/AndroidManifest.xml:5:5-77
 	android:name
-		ADDED from /Users/muhammad/Desktop/dev/heycharge/react-native-sdk/example/android/app/src/debug/AndroidManifest.xml:5:22-75
+		ADDED from /Users/muhammad/Desktop/dev/heycharge/heycharge-react-native-sdk/example/android/app/src/debug/AndroidManifest.xml:5:22-75
 activity#com.facebook.react.devsupport.DevSettingsActivity
-ADDED from /Users/muhammad/Desktop/dev/heycharge/react-native-sdk/example/android/app/src/debug/AndroidManifest.xml:11:9-111
+ADDED from /Users/muhammad/Desktop/dev/heycharge/heycharge-react-native-sdk/example/android/app/src/debug/AndroidManifest.xml:11:9-111
 	android:exported
-		ADDED from /Users/muhammad/Desktop/dev/heycharge/react-native-sdk/example/android/app/src/debug/AndroidManifest.xml:11:84-108
+		ADDED from /Users/muhammad/Desktop/dev/heycharge/heycharge-react-native-sdk/example/android/app/src/debug/AndroidManifest.xml:11:84-108
 	android:name
-		ADDED from /Users/muhammad/Desktop/dev/heycharge/react-native-sdk/example/android/app/src/debug/AndroidManifest.xml:11:19-83
+		ADDED from /Users/muhammad/Desktop/dev/heycharge/heycharge-react-native-sdk/example/android/app/src/debug/AndroidManifest.xml:11:19-83
 uses-permission#android.permission.ACCESS_WIFI_STATE
 ADDED from [com.facebook.flipper:flipper:0.125.0] /Users/muhammad/.gradle/caches/transforms-3/03f04a3f11198ce3b7c6cedb9b41266b/transformed/jetified-flipper-0.125.0/AndroidManifest.xml:16:5-76
 	android:name
 		ADDED from [com.facebook.flipper:flipper:0.125.0] /Users/muhammad/.gradle/caches/transforms-3/03f04a3f11198ce3b7c6cedb9b41266b/transformed/jetified-flipper-0.125.0/AndroidManifest.xml:16:22-73
 uses-permission#android.permission.BLUETOOTH_CONNECT
-ADDED from [com.heycharge:android-sdk:0.0.3] /Users/muhammad/.gradle/caches/transforms-3/b6966a5d8cfcfe472866f76729f7ce8a/transformed/jetified-android-sdk-0.0.3/AndroidManifest.xml:9:5-76
+ADDED from [com.heycharge:android-sdk:0.0.0.4] /Users/muhammad/.gradle/caches/transforms-3/1a22b23be3e0a90ee735d335e63a39a4/transformed/jetified-android-sdk-0.0.0.4/AndroidManifest.xml:9:5-76
 	android:name
-		ADDED from [com.heycharge:android-sdk:0.0.3] /Users/muhammad/.gradle/caches/transforms-3/b6966a5d8cfcfe472866f76729f7ce8a/transformed/jetified-android-sdk-0.0.3/AndroidManifest.xml:9:22-73
+		ADDED from [com.heycharge:android-sdk:0.0.0.4] /Users/muhammad/.gradle/caches/transforms-3/1a22b23be3e0a90ee735d335e63a39a4/transformed/jetified-android-sdk-0.0.0.4/AndroidManifest.xml:9:22-73
 uses-permission#android.permission.BLUETOOTH_SCAN
-ADDED from [com.heycharge:android-sdk:0.0.3] /Users/muhammad/.gradle/caches/transforms-3/b6966a5d8cfcfe472866f76729f7ce8a/transformed/jetified-android-sdk-0.0.3/AndroidManifest.xml:10:5-73
+ADDED from [com.heycharge:android-sdk:0.0.0.4] /Users/muhammad/.gradle/caches/transforms-3/1a22b23be3e0a90ee735d335e63a39a4/transformed/jetified-android-sdk-0.0.0.4/AndroidManifest.xml:10:5-73
 	android:name
-		ADDED from [com.heycharge:android-sdk:0.0.3] /Users/muhammad/.gradle/caches/transforms-3/b6966a5d8cfcfe472866f76729f7ce8a/transformed/jetified-android-sdk-0.0.3/AndroidManifest.xml:10:22-70
+		ADDED from [com.heycharge:android-sdk:0.0.0.4] /Users/muhammad/.gradle/caches/transforms-3/1a22b23be3e0a90ee735d335e63a39a4/transformed/jetified-android-sdk-0.0.0.4/AndroidManifest.xml:10:22-70
 uses-permission#android.permission.ACCESS_COARSE_LOCATION
-ADDED from [com.heycharge:android-sdk:0.0.3] /Users/muhammad/.gradle/caches/transforms-3/b6966a5d8cfcfe472866f76729f7ce8a/transformed/jetified-android-sdk-0.0.3/AndroidManifest.xml:11:5-81
+ADDED from [com.heycharge:android-sdk:0.0.0.4] /Users/muhammad/.gradle/caches/transforms-3/1a22b23be3e0a90ee735d335e63a39a4/transformed/jetified-android-sdk-0.0.0.4/AndroidManifest.xml:11:5-81
 	android:name
-		ADDED from [com.heycharge:android-sdk:0.0.3] /Users/muhammad/.gradle/caches/transforms-3/b6966a5d8cfcfe472866f76729f7ce8a/transformed/jetified-android-sdk-0.0.3/AndroidManifest.xml:11:22-78
+		ADDED from [com.heycharge:android-sdk:0.0.0.4] /Users/muhammad/.gradle/caches/transforms-3/1a22b23be3e0a90ee735d335e63a39a4/transformed/jetified-android-sdk-0.0.0.4/AndroidManifest.xml:11:22-78
 uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from [com.heycharge:android-sdk:0.0.3] /Users/muhammad/.gradle/caches/transforms-3/b6966a5d8cfcfe472866f76729f7ce8a/transformed/jetified-android-sdk-0.0.3/AndroidManifest.xml:12:5-79
+ADDED from [com.heycharge:android-sdk:0.0.0.4] /Users/muhammad/.gradle/caches/transforms-3/1a22b23be3e0a90ee735d335e63a39a4/transformed/jetified-android-sdk-0.0.0.4/AndroidManifest.xml:12:5-79
 	android:name
-		ADDED from [com.heycharge:android-sdk:0.0.3] /Users/muhammad/.gradle/caches/transforms-3/b6966a5d8cfcfe472866f76729f7ce8a/transformed/jetified-android-sdk-0.0.3/AndroidManifest.xml:12:22-76
+		ADDED from [com.heycharge:android-sdk:0.0.0.4] /Users/muhammad/.gradle/caches/transforms-3/1a22b23be3e0a90ee735d335e63a39a4/transformed/jetified-android-sdk-0.0.0.4/AndroidManifest.xml:12:22-76
 uses-permission#android.permission.BLUETOOTH
-ADDED from [com.heycharge:android-sdk:0.0.3] /Users/muhammad/.gradle/caches/transforms-3/b6966a5d8cfcfe472866f76729f7ce8a/transformed/jetified-android-sdk-0.0.3/AndroidManifest.xml:14:5-68
+ADDED from [com.heycharge:android-sdk:0.0.0.4] /Users/muhammad/.gradle/caches/transforms-3/1a22b23be3e0a90ee735d335e63a39a4/transformed/jetified-android-sdk-0.0.0.4/AndroidManifest.xml:14:5-68
 	android:name
-		ADDED from [com.heycharge:android-sdk:0.0.3] /Users/muhammad/.gradle/caches/transforms-3/b6966a5d8cfcfe472866f76729f7ce8a/transformed/jetified-android-sdk-0.0.3/AndroidManifest.xml:14:22-65
+		ADDED from [com.heycharge:android-sdk:0.0.0.4] /Users/muhammad/.gradle/caches/transforms-3/1a22b23be3e0a90ee735d335e63a39a4/transformed/jetified-android-sdk-0.0.0.4/AndroidManifest.xml:14:22-65
 uses-permission#android.permission.WAKE_LOCK
 ADDED from [androidx.work:work-runtime:2.7.1] /Users/muhammad/.gradle/caches/transforms-3/3bc811facf50ede55bc8298072e0374d/transformed/work-runtime-2.7.1/AndroidManifest.xml:25:5-68
 	android:name

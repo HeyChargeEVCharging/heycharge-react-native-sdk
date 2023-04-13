@@ -725,7 +725,7 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/HeyChargeEVCharging/heycharge-ios-sdk.git";
 			requirement = {
-				branch = "feature/conform-to-codable";
+				branch = main;
 				kind = branch;
 			};
 		};

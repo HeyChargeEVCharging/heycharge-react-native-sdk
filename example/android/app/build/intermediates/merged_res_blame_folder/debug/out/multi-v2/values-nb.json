@@ -4,6 +4,23 @@
             "outputFile": "com.heychargesdkexample.app-mergeDebugResources-39:/values-nb/values-nb.xml",
             "map": [
                 {
+                    "source": "/Users/muhammad/Desktop/dev/heycharge/heycharge-react-native-sdk/example/node_modules/react-native-date-picker/android/build/intermediates/packaged_res/debug/values-nb/values-nb.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,111,166,219,274,316,378,427,484,531,577",
+                        "endColumns": "55,54,52,54,41,61,48,56,46,45,52",
+                        "endOffsets": "106,161,214,269,311,373,422,479,526,572,625"
+                    },
+                    "to": {
+                        "startLines": "29,30,31,32,33,34,35,36,37,40,41",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "2737,2793,2848,2901,2956,2998,3060,3109,3166,3394,3440",
+                        "endColumns": "55,54,52,54,41,61,48,56,46,45,52",
+                        "endOffsets": "2788,2843,2896,2951,2993,3055,3104,3161,3208,3435,3488"
+                    }
+                },
+                {
                     "source": "/Users/muhammad/.gradle/caches/transforms-3/1b40e4574e76bff5831ef4bf4270480d/transformed/appcompat-1.4.1/res/values-nb/values-nb.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
@@ -35,23 +52,6 @@
                         "startOffsets": "3293",
                         "endColumns": "100",
                         "endOffsets": "3389"
-                    }
-                },
-                {
-                    "source": "/Users/muhammad/Desktop/dev/heycharge/react-native-sdk/example/node_modules/react-native-date-picker/android/build/intermediates/packaged_res/debug/values-nb/values-nb.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,111,166,219,274,316,378,427,484,531,577",
-                        "endColumns": "55,54,52,54,41,61,48,56,46,45,52",
-                        "endOffsets": "106,161,214,269,311,373,422,479,526,572,625"
-                    },
-                    "to": {
-                        "startLines": "29,30,31,32,33,34,35,36,37,40,41",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "2737,2793,2848,2901,2956,2998,3060,3109,3166,3394,3440",
-                        "endColumns": "55,54,52,54,41,61,48,56,46,45,52",
-                        "endOffsets": "2788,2843,2896,2951,2993,3055,3104,3161,3208,3435,3488"
                     }
                 }
             ]

@@ -11,7 +11,7 @@ import com.facebook.react.shell.MainReactPackage;
 import java.util.Arrays;
 import java.util.ArrayList;
 
-// heycharge-sdk
+// @HeyChargeEVCharging/heycharge-react-native-sdk
 import com.heychargesdk.HeychargeSdkPackage;
 // react-native-date-picker
 import com.henninghall.date_picker.DatePickerPackage;

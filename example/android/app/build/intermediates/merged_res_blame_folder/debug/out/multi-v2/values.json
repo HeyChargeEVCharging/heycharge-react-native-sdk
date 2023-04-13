@@ -91,25 +91,6 @@
                     }
                 },
                 {
-                    "source": "/Users/muhammad/Desktop/dev/heycharge/react-native-sdk/example/node_modules/react-native-date-picker/android/build/intermediates/packaged_res/debug/values/values.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,16,19,27",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "100,158,215,270,327,371,434,483,542,598,643,700,823,909,1276",
-                        "endLines": "2,3,4,5,6,7,8,9,10,11,12,15,18,26,29",
-                        "endColumns": "57,56,54,56,43,62,48,58,55,44,56,12,12,12,12",
-                        "endOffsets": "153,210,265,322,366,429,478,537,593,638,695,818,904,1271,1402"
-                    },
-                    "to": {
-                        "startLines": "701,742,743,750,751,759,760,761,796,818,821,2703,2706,4452,4460",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "44680,49168,49225,49977,50034,50692,50755,50804,57034,59144,59340,179549,179672,294741,295108",
-                        "endLines": "701,742,743,750,751,759,760,761,796,818,821,2705,2708,4459,4462",
-                        "endColumns": "57,56,54,56,43,62,48,58,55,44,56,12,12,12,12",
-                        "endOffsets": "44733,49220,49275,50029,50073,50750,50799,50858,57085,59184,59392,179667,179753,295103,295234"
-                    }
-                },
-                {
                     "source": "/Users/muhammad/.gradle/caches/transforms-3/0bbaa5972f900275fec64cf526ac0bea/transformed/lifecycle-viewmodel-2.3.1/res/values/values.xml",
                     "from": {
                         "startLines": "2",
@@ -165,6 +146,23 @@
                     }
                 },
                 {
+                    "source": "/Users/muhammad/Desktop/dev/heycharge/heycharge-react-native-sdk/example/android/app/build/generated/res/resValues/debug/values/gradleResValues.xml",
+                    "from": {
+                        "startLines": "6,8",
+                        "startColumns": "4,4",
+                        "startOffsets": "156,262",
+                        "endColumns": "63,68",
+                        "endOffsets": "215,326"
+                    },
+                    "to": {
+                        "startLines": "665,666",
+                        "startColumns": "4,4",
+                        "startOffsets": "42161,42225",
+                        "endColumns": "63,68",
+                        "endOffsets": "42220,42289"
+                    }
+                },
+                {
                     "source": "/Users/muhammad/.gradle/caches/transforms-3/25ca79b7ef1a689e48a9ba2099d7ac89/transformed/jetified-appcompat-resources-1.4.1/res/values/values.xml",
                     "from": {
                         "startLines": "2,29,36,47,74",
@@ -203,20 +201,22 @@
                     }
                 },
                 {
-                    "source": "/Users/muhammad/Desktop/dev/heycharge/react-native-sdk/example/android/app/build/generated/res/resValues/debug/values/gradleResValues.xml",
+                    "source": "/Users/muhammad/Desktop/dev/heycharge/heycharge-react-native-sdk/example/node_modules/react-native-date-picker/android/build/intermediates/packaged_res/debug/values/values.xml",
                     "from": {
-                        "startLines": "6,8",
-                        "startColumns": "4,4",
-                        "startOffsets": "156,262",
-                        "endColumns": "63,68",
-                        "endOffsets": "215,326"
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,16,19,27",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "100,158,215,270,327,371,434,483,542,598,643,700,823,909,1276",
+                        "endLines": "2,3,4,5,6,7,8,9,10,11,12,15,18,26,29",
+                        "endColumns": "57,56,54,56,43,62,48,58,55,44,56,12,12,12,12",
+                        "endOffsets": "153,210,265,322,366,429,478,537,593,638,695,818,904,1271,1402"
                     },
                     "to": {
-                        "startLines": "665,666",
-                        "startColumns": "4,4",
-                        "startOffsets": "42161,42225",
-                        "endColumns": "63,68",
-                        "endOffsets": "42220,42289"
+                        "startLines": "701,742,743,750,751,759,760,761,796,818,821,2703,2706,4452,4460",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "44680,49168,49225,49977,50034,50692,50755,50804,57034,59144,59340,179549,179672,294741,295108",
+                        "endLines": "701,742,743,750,751,759,760,761,796,818,821,2705,2708,4459,4462",
+                        "endColumns": "57,56,54,56,43,62,48,58,55,44,56,12,12,12,12",
+                        "endOffsets": "44733,49220,49275,50029,50073,50750,50799,50858,57085,59184,59392,179667,179753,295103,295234"
                     }
                 },
                 {
@@ -389,7 +389,7 @@
                     }
                 },
                 {
-                    "source": "/Users/muhammad/Desktop/dev/heycharge/react-native-sdk/example/android/app/src/main/res/values/strings.xml",
+                    "source": "/Users/muhammad/Desktop/dev/heycharge/heycharge-react-native-sdk/example/android/app/src/main/res/values/strings.xml",
                     "from": {
                         "startLines": "1",
                         "startColumns": "4",
@@ -423,7 +423,7 @@
                     }
                 },
                 {
-                    "source": "/Users/muhammad/Desktop/dev/heycharge/react-native-sdk/example/android/app/src/main/res/values/styles.xml",
+                    "source": "/Users/muhammad/Desktop/dev/heycharge/heycharge-react-native-sdk/example/android/app/src/main/res/values/styles.xml",
                     "from": {
                         "startLines": "3",
                         "startColumns": "4",
