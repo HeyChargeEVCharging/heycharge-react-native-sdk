@@ -1,5 +1,5 @@
 {
-  "name": "@heychargeevcharging/heycharge-react-native-sdk",
+  "name": "@heycharge/heycharge-react-native-sdk",
   "version": "0.1.4",
   "description": "test",
   "main": "src/index",
