@@ -5,6 +5,7 @@ buildscript {
   repositories {
       google()
       mavenCentral()
+      maven { url 'https://jitpack.io' }
   }
 
   dependencies {
@@ -139,7 +140,7 @@ dependencies {
   implementation "com.facebook.react:react-native:+"
   implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
   implementation "com.google.code.gson:gson:2.9.0"
-  implementation 'com.heycharge:android-sdk:1.0.2'
+  implementation 'com.gitlab.heycharge:android-sdk:1.0.0'
 // From node_modules
 }
 
