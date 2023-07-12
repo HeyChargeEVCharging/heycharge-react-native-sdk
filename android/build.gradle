@@ -63,9 +63,6 @@ repositories {
   mavenCentral()
   google()
   mavenLocal()
-  maven {
-    url 'https://gitlab.com/api/v4/projects/30547834/packages/maven'
-  }
 
   def found = false
   def defaultDir = null
@@ -140,7 +137,7 @@ dependencies {
   implementation "com.facebook.react:react-native:+"
   implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
   implementation "com.google.code.gson:gson:2.9.0"
-  implementation 'com.gitlab.heycharge:android-sdk:1.0.0'
+  implementation 'com.gitlab.heycharge:android-sdk:1.0.1'
 // From node_modules
 }
 

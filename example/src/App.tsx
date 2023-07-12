@@ -1,5 +1,5 @@
 import * as React from 'react';
-import * as HeyCharge from '@HeyChargeEVCharging/heycharge-react-native-sdk';
+import * as HeyCharge from '@heycharge/heycharge-react-native-sdk';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import LoginScreen from './login';

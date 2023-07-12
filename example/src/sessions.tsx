@@ -7,10 +7,10 @@ import {
   EmitterSubscription,
   Button,
 } from 'react-native';
-import * as HeyCharge from '@HeyChargeEVCharging/heycharge-react-native-sdk';
+import * as HeyCharge from '@heycharge/heycharge-react-native-sdk';
 import DatePicker from 'react-native-date-picker';
 import Card from './card'
-import type { Session } from '@HeyChargeEVCharging/heycharge-react-native-sdk';
+import type { Session } from '@heycharge/heycharge-react-native-sdk';
 
 class SessionsScreen extends Component {
   state = { sessions: [], showPicker: false, period: new Date() };

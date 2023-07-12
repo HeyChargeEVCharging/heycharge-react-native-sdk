@@ -10,12 +10,12 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import Card from './card';
-import * as HeyCharge from '@HeyChargeEVCharging/heycharge-react-native-sdk';
+import * as HeyCharge from '@heycharge/heycharge-react-native-sdk';
 import {
   type RNCharger,
   type Charger,
   ChargerState,
-} from '@HeyChargeEVCharging/heycharge-react-native-sdk';
+} from '@heycharge/heycharge-react-native-sdk';
 
 class ChargersScreen extends Component {
   state = {
