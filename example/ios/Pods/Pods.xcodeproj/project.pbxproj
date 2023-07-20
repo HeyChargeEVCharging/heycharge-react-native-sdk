@@ -3073,6 +3073,7 @@
 		46EB2E0001A420 /* Pods-HeychargeSdkExample-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E0001A410 /* Pods-HeychargeSdkExample-dummy.m */; };
 		46EB2E0001A500 /* Pods-HeychargeSdkExample-HeychargeSdkExampleTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 46EB2E0001A4F0 /* Pods-HeychargeSdkExample-HeychargeSdkExampleTests-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		46EB2E0001A560 /* Pods-HeychargeSdkExample-HeychargeSdkExampleTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E0001A550 /* Pods-HeychargeSdkExample-HeychargeSdkExampleTests-dummy.m */; };
+		527C64422A69897D0039C90F /* EventEmitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527C64412A69897D0039C90F /* EventEmitter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -8177,6 +8178,7 @@
 		46EB2E0001A540 /* Pods-HeychargeSdkExample-HeychargeSdkExampleTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-HeychargeSdkExample-HeychargeSdkExampleTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		46EB2E0001A550 /* Pods-HeychargeSdkExample-HeychargeSdkExampleTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HeychargeSdkExample-HeychargeSdkExampleTests-dummy.m"; sourceTree = "<group>"; };
 		50B5347C9A6E93B7D4CFC3673BA6FB7E /* RNScreens */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = RNScreens; path = libRNScreens.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		527C64412A69897D0039C90F /* EventEmitter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventEmitter.swift; path = ios/EventEmitter.swift; sourceTree = "<group>"; };
 		52EAF1124A3C62232E15615B7D9A6507 /* react-native-simple-toast */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "react-native-simple-toast"; path = "libreact-native-simple-toast.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52FCF98CEFF94C742080B6965D537AD0 /* react-native-safe-area-context */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "react-native-safe-area-context"; path = "libreact-native-safe-area-context.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		55E0AFD333353D71ACC2207149E879D6 /* Toast */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = Toast; path = libToast.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -10945,6 +10947,7 @@
 				46EB2E0000B430 /* HeychargeSdk.swift */,
 				46EB2E0000B410 /* HeychargeSdk-Bridging-Header.h */,
 				46EB2E0000B440 /* RNCharger.swift */,
+				527C64412A69897D0039C90F /* EventEmitter.swift */,
 				46EB2E0000BED0 /* Pod */,
 				46EB2E00019830 /* Support Files */,
 			);
@@ -16633,8 +16636,6 @@
 				46EB2E0001C770 /* PBXTargetDependency */,
 			);
 			name = "heycharge-react-native-sdk";
-			packageProductDependencies = (
-			);
 			productName = "heycharge-react-native-sdk";
 			productReference = 8E051A2C821B77E0DB0011528FA0103A /* heycharge-react-native-sdk */;
 			productType = "com.apple.product-type.library.static";
@@ -17278,8 +17279,6 @@
 				en,
 			);
 			mainGroup = 46EB2E00000010;
-			packageReferences = (
-			);
 			productRefGroup = 46EB2E00000020 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -18695,6 +18694,7 @@
 				46EB2E000198C0 /* heycharge-react-native-sdk-dummy.m in Sources */,
 				46EB2E000197F0 /* HeychargeSdk.m in Sources */,
 				46EB2E00019800 /* HeychargeSdk.swift in Sources */,
+				527C64422A69897D0039C90F /* EventEmitter.swift in Sources */,
 				46EB2E00019810 /* RNCharger.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

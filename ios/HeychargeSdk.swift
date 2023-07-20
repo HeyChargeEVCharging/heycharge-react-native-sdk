@@ -12,6 +12,15 @@ class HeychargeSdk: RCTEventEmitter {
     private let chargersChannel = "Chargers"
     private let sessionsChannel = "Sessions"
     private let otaChannel = "OTA"
+    
+    override init() {
+        super.init()
+        EventEmitter.shared.register(eventEmitter: self)
+    }
+        
+    private func emit(eventName: String, body: Any? = nil) {
+        EventEmitter.shared.emit(eventName: eventName, body: body)
+    }
 
     @objc func initialize(_ sdkKey: String) -> Void {
         HeyChargeSDK.initialize(sdkKey: sdkKey)
@@ -55,7 +64,7 @@ class HeychargeSdk: RCTEventEmitter {
                         print("Failed to encode charger to JSON: \(error)")
                     }
                 }
-                self.sendEvent(withName: self.chargersChannel, body: rnChargers)
+                self.emit(eventName: self.chargersChannel, body: rnChargers)
             })
         }
     }
@@ -88,7 +97,7 @@ class HeychargeSdk: RCTEventEmitter {
                     print("Failed to encode charger to JSON: \(error)")
                 }
             }
-            self.sendEvent(withName: self.sessionsChannel, body: rnSessions)
+            self.emit(eventName: self.sessionsChannel, body: rnSessions)
         })
     }
     
