@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		523284D2299A65C50038D5DE /* heycharge_ios_sdk in Frameworks */ = {isa = PBXBuildFile; productRef = 523284D1299A65C50038D5DE /* heycharge_ios_sdk */; };
+		390D49C02A8380AE00D6CFC4 /* heycharge_ios_sdk in Frameworks */ = {isa = PBXBuildFile; productRef = 390D49BF2A8380AE00D6CFC4 /* heycharge_ios_sdk */; };
 		525CF387299CEB7E002A9FBB /* RNCharger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525CF386299CEB7E002A9FBB /* RNCharger.swift */; };
 		F4FF95D7245B92E800C19C63 /* HeychargeSdk.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FF95D6245B92E800C19C63 /* HeychargeSdk.swift */; };
 /* End PBXBuildFile section */
@@ -37,7 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				523284D2299A65C50038D5DE /* heycharge_ios_sdk in Frameworks */,
+				390D49C02A8380AE00D6CFC4 /* heycharge_ios_sdk in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,7 +80,7 @@
 			);
 			name = HeychargeSdk;
 			packageProductDependencies = (
-				523284D1299A65C50038D5DE /* heycharge_ios_sdk */,
+				390D49BF2A8380AE00D6CFC4 /* heycharge_ios_sdk */,
 			);
 			productName = RCTDataManager;
 			productReference = 134814201AA4EA6300B7C361 /* libHeychargeSdk.a */;
@@ -110,7 +110,7 @@
 			);
 			mainGroup = 58B511D21A9E6C8500147676;
 			packageReferences = (
-				523284D0299A65C50038D5DE /* XCRemoteSwiftPackageReference "heycharge-ios-sdk" */,
+				390D49BE2A8380AE00D6CFC4 /* XCRemoteSwiftPackageReference "heycharge-ios-sdk" */,
 			);
 			productRefGroup = 58B511D21A9E6C8500147676;
 			projectDirPath = "";
@@ -290,20 +290,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		523284D0299A65C50038D5DE /* XCRemoteSwiftPackageReference "heycharge-ios-sdk" */ = {
+		390D49BE2A8380AE00D6CFC4 /* XCRemoteSwiftPackageReference "heycharge-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/HeyChargeEVCharging/heycharge-ios-sdk.git";
+			repositoryURL = "https://github.com/HeyChargeEVCharging/heycharge-ios-sdk";
 			requirement = {
-				branch = main;
+				branch = "feature/release-fixes";
 				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		523284D1299A65C50038D5DE /* heycharge_ios_sdk */ = {
+		390D49BF2A8380AE00D6CFC4 /* heycharge_ios_sdk */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 523284D0299A65C50038D5DE /* XCRemoteSwiftPackageReference "heycharge-ios-sdk" */;
+			package = 390D49BE2A8380AE00D6CFC4 /* XCRemoteSwiftPackageReference "heycharge-ios-sdk" */;
 			productName = heycharge_ios_sdk;
 		};
 /* End XCSwiftPackageProductDependency section */
