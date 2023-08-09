@@ -31,6 +31,10 @@ class FBJSRuntime;
 namespace facebook {
 namespace jsi {
 
+/// Base class for buffers of data or bytecode that need to be passed to the
+/// runtime. The buffer is expected to be fully immutable, so the result of
+/// size(), data(), and the contents of the pointer returned by data() must not
+/// change after construction.
 class JSI_EXPORT Buffer {
  public:
   virtual ~Buffer();
@@ -50,6 +54,18 @@ class JSI_EXPORT StringBuffer : public Buffer {
 
  private:
   std::string s_;
+};
+
+/// Base class for buffers of data that need to be passed to the runtime. The
+/// result of size() and data() must not change after construction. However, the
+/// region pointed to by data() may be modified by the user or the runtime. The
+/// user must ensure that access to the contents of the buffer is properly
+/// synchronised.
+class JSI_EXPORT MutableBuffer {
+ public:
+  virtual ~MutableBuffer();
+  virtual size_t size() const = 0;
+  virtual uint8_t* data() = 0;
 };
 
 /// PreparedJavaScript is a base class representing JavaScript which is in a
@@ -126,6 +142,13 @@ class JSI_EXPORT HostObject {
   // call this method. If it throws an exception, the call will throw a
   // JS \c Error object. The default implementation returns empty vector.
   virtual std::vector<PropNameID> getPropertyNames(Runtime& rt);
+};
+
+/// Native state (and destructor) that can be attached to any JS object
+/// using setNativeState.
+class JSI_EXPORT NativeState {
+ public:
+  virtual ~NativeState();
 };
 
 /// Represents a JS runtime.  Movable, but not copyable.  Note that
@@ -283,6 +306,13 @@ class JSI_EXPORT Runtime {
 
   virtual std::string symbolToString(const Symbol&) = 0;
 
+  virtual BigInt createBigIntFromInt64(int64_t) = 0;
+  virtual BigInt createBigIntFromUint64(uint64_t) = 0;
+  virtual bool bigintIsInt64(const BigInt&) = 0;
+  virtual bool bigintIsUint64(const BigInt&) = 0;
+  virtual uint64_t truncate(const BigInt&) = 0;
+  virtual String bigintToString(const BigInt&, int) = 0;
+
   virtual String createStringFromAscii(const char* str, size_t length) = 0;
   virtual String createStringFromUtf8(const uint8_t* utf8, size_t length) = 0;
   virtual std::string utf8(const String&) = 0;
@@ -296,14 +326,22 @@ class JSI_EXPORT Runtime {
   virtual std::shared_ptr<HostObject> getHostObject(const jsi::Object&) = 0;
   virtual HostFunctionType& getHostFunction(const jsi::Function&) = 0;
 
+  virtual bool hasNativeState(const jsi::Object&) = 0;
+  virtual std::shared_ptr<NativeState> getNativeState(const jsi::Object&) = 0;
+  virtual void setNativeState(
+      const jsi::Object&,
+      std::shared_ptr<NativeState> state) = 0;
+
   virtual Value getProperty(const Object&, const PropNameID& name) = 0;
   virtual Value getProperty(const Object&, const String& name) = 0;
   virtual bool hasProperty(const Object&, const PropNameID& name) = 0;
   virtual bool hasProperty(const Object&, const String& name) = 0;
+  virtual void setPropertyValue(
+      const Object&,
+      const PropNameID& name,
+      const Value& value) = 0;
   virtual void
-  setPropertyValue(Object&, const PropNameID& name, const Value& value) = 0;
-  virtual void
-  setPropertyValue(Object&, const String& name, const Value& value) = 0;
+  setPropertyValue(const Object&, const String& name, const Value& value) = 0;
 
   virtual bool isArray(const Object&) const = 0;
   virtual bool isArrayBuffer(const Object&) const = 0;
@@ -313,14 +351,17 @@ class JSI_EXPORT Runtime {
   virtual Array getPropertyNames(const Object&) = 0;
 
   virtual WeakObject createWeakObject(const Object&) = 0;
-  virtual Value lockWeakObject(WeakObject&) = 0;
+  virtual Value lockWeakObject(const WeakObject&) = 0;
 
   virtual Array createArray(size_t length) = 0;
+  virtual ArrayBuffer createArrayBuffer(
+      std::shared_ptr<MutableBuffer> buffer) = 0;
   virtual size_t size(const Array&) = 0;
   virtual size_t size(const ArrayBuffer&) = 0;
   virtual uint8_t* data(const ArrayBuffer&) = 0;
   virtual Value getValueAtIndex(const Array&, size_t i) = 0;
-  virtual void setValueAtIndexImpl(Array&, size_t i, const Value& value) = 0;
+  virtual void
+  setValueAtIndexImpl(const Array&, size_t i, const Value& value) = 0;
 
   virtual Function createFunctionFromHostFunction(
       const PropNameID& name,
@@ -494,6 +535,53 @@ class JSI_EXPORT BigInt : public Pointer {
   BigInt(BigInt&& other) = default;
   BigInt& operator=(BigInt&& other) = default;
 
+  /// Create a BigInt representing the signed 64-bit \p value.
+  static BigInt fromInt64(Runtime& runtime, int64_t value) {
+    return runtime.createBigIntFromInt64(value);
+  }
+
+  /// Create a BigInt representing the unsigned 64-bit \p value.
+  static BigInt fromUint64(Runtime& runtime, uint64_t value) {
+    return runtime.createBigIntFromUint64(value);
+  }
+
+  /// \return whether a === b.
+  static bool strictEquals(Runtime& runtime, const BigInt& a, const BigInt& b) {
+    return runtime.strictEquals(a, b);
+  }
+
+  /// \returns This bigint truncated to a signed 64-bit integer.
+  int64_t getInt64(Runtime& runtime) const {
+    return runtime.truncate(*this);
+  }
+
+  /// \returns Whether this bigint can be losslessly converted to int64_t.
+  bool isInt64(Runtime& runtime) const {
+    return runtime.bigintIsInt64(*this);
+  }
+
+  /// \returns This bigint truncated to a signed 64-bit integer. Throws a
+  /// JSIException if the truncation is lossy.
+  int64_t asInt64(Runtime& runtime) const;
+
+  /// \returns This bigint truncated to an unsigned 64-bit integer.
+  uint64_t getUint64(Runtime& runtime) const {
+    return runtime.truncate(*this);
+  }
+
+  /// \returns Whether this bigint can be losslessly converted to uint64_t.
+  bool isUint64(Runtime& runtime) const {
+    return runtime.bigintIsUint64(*this);
+  }
+
+  /// \returns This bigint truncated to an unsigned 64-bit integer. Throws a
+  /// JSIException if the truncation is lossy.
+  uint64_t asUint64(Runtime& runtime) const;
+
+  /// \returns this BigInt converted to a String in base \p radix. Throws a
+  /// JSIException if radix is not in the [2, 36] range.
+  inline String toString(Runtime& runtime, int radix = 10) const;
+
   friend class Runtime;
   friend class Value;
 };
@@ -581,7 +669,7 @@ class JSI_EXPORT Object : public Pointer {
   }
 
   /// \return the result of `this instanceOf ctor` in JS.
-  bool instanceOf(Runtime& rt, const Function& ctor) {
+  bool instanceOf(Runtime& rt, const Function& ctor) const {
     return rt.instanceOf(*this, ctor);
   }
 
@@ -616,19 +704,19 @@ class JSI_EXPORT Object : public Pointer {
   /// used to make one: nullptr_t, bool, double, int, const char*,
   /// String, or Object.
   template <typename T>
-  void setProperty(Runtime& runtime, const char* name, T&& value);
+  void setProperty(Runtime& runtime, const char* name, T&& value) const;
 
   /// Sets the property value from a Value or anything which can be
   /// used to make one: nullptr_t, bool, double, int, const char*,
   /// String, or Object.
   template <typename T>
-  void setProperty(Runtime& runtime, const String& name, T&& value);
+  void setProperty(Runtime& runtime, const String& name, T&& value) const;
 
   /// Sets the property value from a Value or anything which can be
   /// used to make one: nullptr_t, bool, double, int, const char*,
   /// String, or Object.
   template <typename T>
-  void setProperty(Runtime& runtime, const PropNameID& name, T&& value);
+  void setProperty(Runtime& runtime, const PropNameID& name, T&& value) const;
 
   /// \return true iff JS \c Array.isArray() would return \c true.  If
   /// so, then \c getArray() will succeed.
@@ -711,6 +799,25 @@ class JSI_EXPORT Object : public Pointer {
   template <typename T = HostObject>
   std::shared_ptr<T> asHostObject(Runtime& runtime) const;
 
+  /// \return whether this object has native state of type T previously set by
+  /// \c setNativeState.
+  template <typename T = NativeState>
+  bool hasNativeState(Runtime& runtime) const;
+
+  /// \return a shared_ptr to the state previously set by \c setNativeState.
+  /// If \c hasNativeState<T> is false, this will assert. Note that this does a
+  /// type check and will assert if the native state isn't of type \c T
+  template <typename T = NativeState>
+  std::shared_ptr<T> getNativeState(Runtime& runtime) const;
+
+  /// Set the internal native state property of this object, overwriting any old
+  /// value. Creates a new shared_ptr to the object managed by \p state, which
+  /// will live until the value at this property becomes unreachable.
+  ///
+  /// Throws a type error if this object is a proxy or host object.
+  void setNativeState(Runtime& runtime, std::shared_ptr<NativeState> state)
+      const;
+
   /// \return same as \c getProperty(name).asObject(), except with
   /// a better exception message.
   Object getPropertyAsObject(Runtime& runtime, const char* name) const;
@@ -728,15 +835,17 @@ class JSI_EXPORT Object : public Pointer {
   Array getPropertyNames(Runtime& runtime) const;
 
  protected:
-  void
-  setPropertyValue(Runtime& runtime, const String& name, const Value& value) {
+  void setPropertyValue(
+      Runtime& runtime,
+      const String& name,
+      const Value& value) const {
     return runtime.setPropertyValue(*this, name, value);
   }
 
   void setPropertyValue(
       Runtime& runtime,
       const PropNameID& name,
-      const Value& value) {
+      const Value& value) const {
     return runtime.setPropertyValue(*this, name, value);
   }
 
@@ -762,7 +871,7 @@ class JSI_EXPORT WeakObject : public Pointer {
   /// otherwise returns \c undefined.  Note that this method has nothing to do
   /// with threads or concurrency.  The name is based on std::weak_ptr::lock()
   /// which serves a similar purpose.
-  Value lock(Runtime& runtime);
+  Value lock(Runtime& runtime) const;
 
   friend class Runtime;
 };
@@ -798,7 +907,7 @@ class JSI_EXPORT Array : public Object {
   /// value behaves as with Object::setProperty().  If \c i is out of
   /// range [ 0..\c length ] throws a JSIException.
   template <typename T>
-  void setValueAtIndex(Runtime& runtime, size_t i, T&& value);
+  void setValueAtIndex(Runtime& runtime, size_t i, T&& value) const;
 
   /// There is no current API for changing the size of an array once
   /// created.  We'll probably need that eventually.
@@ -816,7 +925,8 @@ class JSI_EXPORT Array : public Object {
   friend class Object;
   friend class Value;
 
-  void setValueAtIndexImpl(Runtime& runtime, size_t i, const Value& value) {
+  void setValueAtIndexImpl(Runtime& runtime, size_t i, const Value& value)
+      const {
     return runtime.setValueAtIndexImpl(*this, i, value);
   }
 
@@ -829,6 +939,9 @@ class JSI_EXPORT ArrayBuffer : public Object {
   ArrayBuffer(ArrayBuffer&&) = default;
   ArrayBuffer& operator=(ArrayBuffer&&) = default;
 
+  ArrayBuffer(Runtime& runtime, std::shared_ptr<MutableBuffer> buffer)
+      : ArrayBuffer(runtime.createArrayBuffer(std::move(buffer))) {}
+
   /// \return the size of the ArrayBuffer, according to its byteLength property.
   /// (C++ naming convention)
   size_t size(Runtime& runtime) const {
@@ -839,7 +952,7 @@ class JSI_EXPORT ArrayBuffer : public Object {
     return runtime.size(*this);
   }
 
-  uint8_t* data(Runtime& runtime) {
+  uint8_t* data(Runtime& runtime) const {
     return runtime.data(*this);
   }
 
