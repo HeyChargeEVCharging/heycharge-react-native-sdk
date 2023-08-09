@@ -8,13 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* HeychargeSdkExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* HeychargeSdkExampleTests.m */; };
-		0C80B921A6F3F58F76C31292 /* libPods-HeychargeSdkExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-HeychargeSdkExample.a */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
-		5247A78F29DD9EB0005312BF /* heycharge_ios_sdk in Frameworks */ = {isa = PBXBuildFile; productRef = 5247A78E29DD9EB0005312BF /* heycharge_ios_sdk */; };
 		525CF385299BCA83002A9FBB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525CF384299BCA83002A9FBB /* AppDelegate.swift */; };
-		5296297C29E05C3F0058BF34 /* libheycharge-react-native-sdk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5296297B29E05C3F0058BF34 /* libheycharge-react-native-sdk.a */; };
-		7699B88040F8A987B510C191 /* libPods-HeychargeSdkExample-HeychargeSdkExampleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-HeychargeSdkExample-HeychargeSdkExampleTests.a */; };
+		6B9AC24C2A840BE80070C78A /* ios-sdk.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B2304322A83EDDC00CE4865 /* ios-sdk.xcframework */; };
+		6B9AC24D2A840BE80070C78A /* ios-sdk.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6B2304322A83EDDC00CE4865 /* ios-sdk.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		D1BB432412EE584D9818BDEC /* libPods-HeychargeSdkExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 65BF6262DB573EF5E2D752EA /* libPods-HeychargeSdkExample.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +26,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		6B9AC24E2A840BE80070C78A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				6B9AC24D2A840BE80070C78A /* ios-sdk.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		00E356EE1AD99517003FC87E /* HeychargeSdkExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HeychargeSdkExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -34,16 +47,15 @@
 		13B07F961A680F5B00A75B9A /* HeychargeSdkExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeychargeSdkExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = HeychargeSdkExample/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = HeychargeSdkExample/Info.plist; sourceTree = "<group>"; };
-		19F6CBCC0A4E27FBF8BF4A61 /* libPods-HeychargeSdkExample-HeychargeSdkExampleTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HeychargeSdkExample-HeychargeSdkExampleTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B4392A12AC88292D35C810B /* Pods-HeychargeSdkExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeychargeSdkExample.debug.xcconfig"; path = "Target Support Files/Pods-HeychargeSdkExample/Pods-HeychargeSdkExample.debug.xcconfig"; sourceTree = "<group>"; };
 		523F154429C9DC1C00973DB0 /* Combine.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Combine.framework; path = System/Library/Frameworks/Combine.framework; sourceTree = SDKROOT; };
 		525CF383299BCA83002A9FBB /* HeychargeSdkExample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HeychargeSdkExample-Bridging-Header.h"; sourceTree = "<group>"; };
 		525CF384299BCA83002A9FBB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5296297B29E05C3F0058BF34 /* libheycharge-react-native-sdk.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libheycharge-react-native-sdk.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		529BF58A299BABBF00C598DB /* HeychargeSdkExample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = HeychargeSdkExample.entitlements; path = HeychargeSdkExample/HeychargeSdkExample.entitlements; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-HeychargeSdkExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeychargeSdkExample.release.xcconfig"; path = "Target Support Files/Pods-HeychargeSdkExample/Pods-HeychargeSdkExample.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-HeychargeSdkExample-HeychargeSdkExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeychargeSdkExample-HeychargeSdkExampleTests.debug.xcconfig"; path = "Target Support Files/Pods-HeychargeSdkExample-HeychargeSdkExampleTests/Pods-HeychargeSdkExample-HeychargeSdkExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
-		5DCACB8F33CDC322A6C60F78 /* libPods-HeychargeSdkExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HeychargeSdkExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		65BF6262DB573EF5E2D752EA /* libPods-HeychargeSdkExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HeychargeSdkExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B2304322A83EDDC00CE4865 /* ios-sdk.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = "ios-sdk.xcframework"; path = "../../ios/Frameworks/ios-sdk.xcframework"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = HeychargeSdkExample/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-HeychargeSdkExample-HeychargeSdkExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeychargeSdkExample-HeychargeSdkExampleTests.release.xcconfig"; path = "Target Support Files/Pods-HeychargeSdkExample-HeychargeSdkExampleTests/Pods-HeychargeSdkExample-HeychargeSdkExampleTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
@@ -54,7 +66,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7699B88040F8A987B510C191 /* libPods-HeychargeSdkExample-HeychargeSdkExampleTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,9 +73,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5247A78F29DD9EB0005312BF /* heycharge_ios_sdk in Frameworks */,
-				5296297C29E05C3F0058BF34 /* libheycharge-react-native-sdk.a in Frameworks */,
-				0C80B921A6F3F58F76C31292 /* libPods-HeychargeSdkExample.a in Frameworks */,
+				6B9AC24C2A840BE80070C78A /* ios-sdk.xcframework in Frameworks */,
+				D1BB432412EE584D9818BDEC /* libPods-HeychargeSdkExample.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,11 +114,10 @@
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5296297B29E05C3F0058BF34 /* libheycharge-react-native-sdk.a */,
+				6B2304322A83EDDC00CE4865 /* ios-sdk.xcframework */,
 				523F154429C9DC1C00973DB0 /* Combine.framework */,
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				5DCACB8F33CDC322A6C60F78 /* libPods-HeychargeSdkExample.a */,
-				19F6CBCC0A4E27FBF8BF4A61 /* libPods-HeychargeSdkExample-HeychargeSdkExampleTests.a */,
+				65BF6262DB573EF5E2D752EA /* libPods-HeychargeSdkExample.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -167,7 +176,7 @@
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
 				C59DA0FBD6956966B86A3779 /* [CP] Embed Pods Frameworks */,
-				F6A41C54EA430FDDC6A6ED99 /* [CP] Copy Pods Resources */,
+				1BA501A8BF72B445C2BDA813 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -190,16 +199,14 @@
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
 				00EEFC60759A1932668264C0 /* [CP] Embed Pods Frameworks */,
-				E235C05ADACE081382539298 /* [CP] Copy Pods Resources */,
+				B8D1732BF466CD86E156C758 /* [CP] Copy Pods Resources */,
+				6B9AC24E2A840BE80070C78A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = HeychargeSdkExample;
-			packageProductDependencies = (
-				5247A78E29DD9EB0005312BF /* heycharge_ios_sdk */,
-			);
 			productName = HeychargeSdkExample;
 			productReference = 13B07F961A680F5B00A75B9A /* HeychargeSdkExample.app */;
 			productType = "com.apple.product-type.application";
@@ -230,9 +237,6 @@
 				Base,
 			);
 			mainGroup = 83CBB9F61A601CBA00E9B192;
-			packageReferences = (
-				5247A78D29DD9EB0005312BF /* XCRemoteSwiftPackageReference "heycharge-ios-sdk" */,
-			);
 			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -296,6 +300,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HeychargeSdkExample/Pods-HeychargeSdkExample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		1BA501A8BF72B445C2BDA813 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HeychargeSdkExample-HeychargeSdkExampleTests/Pods-HeychargeSdkExample-HeychargeSdkExampleTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HeychargeSdkExample-HeychargeSdkExampleTests/Pods-HeychargeSdkExample-HeychargeSdkExampleTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HeychargeSdkExample-HeychargeSdkExampleTests/Pods-HeychargeSdkExample-HeychargeSdkExampleTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		A55EABD7B0C7F3A422A6CC61 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -316,6 +337,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B8D1732BF466CD86E156C758 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HeychargeSdkExample/Pods-HeychargeSdkExample-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HeychargeSdkExample/Pods-HeychargeSdkExample-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HeychargeSdkExample/Pods-HeychargeSdkExample-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C38B50BA6285516D6DCD4F65 /* [CP] Check Pods Manifest.lock */ = {
@@ -355,40 +393,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HeychargeSdkExample-HeychargeSdkExampleTests/Pods-HeychargeSdkExample-HeychargeSdkExampleTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E235C05ADACE081382539298 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-HeychargeSdkExample/Pods-HeychargeSdkExample-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-HeychargeSdkExample/Pods-HeychargeSdkExample-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HeychargeSdkExample/Pods-HeychargeSdkExample-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F6A41C54EA430FDDC6A6ED99 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-HeychargeSdkExample-HeychargeSdkExampleTests/Pods-HeychargeSdkExample-HeychargeSdkExampleTests-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-HeychargeSdkExample-HeychargeSdkExampleTests/Pods-HeychargeSdkExample-HeychargeSdkExampleTests-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HeychargeSdkExample-HeychargeSdkExampleTests/Pods-HeychargeSdkExample-HeychargeSdkExampleTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -516,9 +520,13 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = HeychargeSdkExample;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_OBJC_BRIDGING_HEADER = "HeychargeSdkExample-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -545,8 +553,12 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = HeychargeSdkExample;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_OBJC_BRIDGING_HEADER = "HeychargeSdkExample-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
@@ -600,6 +612,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon-Samples/ReactCommon_Samples.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon/ReactCommon.framework/Headers/react/nativemodule/core",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon-Samples/ReactCommon_Samples.framework/Headers/platform/ios",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-NativeModulesApple/React_NativeModulesApple.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-graphics/React_graphics.framework/Headers/react/renderer/graphics/platform/ios",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					/usr/lib/swift,
@@ -612,6 +632,7 @@
 				);
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = "$(inherited)";
 				OTHER_CPLUSPLUSFLAGS = (
 					"$(OTHER_CFLAGS)",
 					"-DFOLLY_NO_CONFIG",
@@ -665,6 +686,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon-Samples/ReactCommon_Samples.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon/ReactCommon.framework/Headers/react/nativemodule/core",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon-Samples/ReactCommon_Samples.framework/Headers/platform/ios",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-NativeModulesApple/React_NativeModulesApple.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-graphics/React_graphics.framework/Headers/react/renderer/graphics/platform/ios",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					/usr/lib/swift,
@@ -676,6 +705,7 @@
 					"\"$(inherited)\"",
 				);
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_CFLAGS = "$(inherited)";
 				OTHER_CPLUSPLUSFLAGS = (
 					"$(OTHER_CFLAGS)",
 					"-DFOLLY_NO_CONFIG",
@@ -719,25 +749,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		5247A78D29DD9EB0005312BF /* XCRemoteSwiftPackageReference "heycharge-ios-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/HeyChargeEVCharging/heycharge-ios-sdk.git";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		5247A78E29DD9EB0005312BF /* heycharge_ios_sdk */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 5247A78D29DD9EB0005312BF /* XCRemoteSwiftPackageReference "heycharge-ios-sdk" */;
-			productName = heycharge_ios_sdk;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 83CBB9F71A601CBA00E9B192 /* Project object */;
 }
