@@ -2,6 +2,10 @@ import { EmitterSubscription } from 'react-native';
 import type { Charger, RNCharger, Session } from 'src/interfaces';
 export declare function initialize(sdkKey: string): void;
 export declare function setUserId(userId: string): void;
+export declare function initializeChargers(propertyId: string): void;
+export declare function getUserPropertiesCombined(callback: (properties: {
+    [key: string]: string;
+}) => void, errorCallback: (error: Error) => void): void;
 export declare function observeChargers(callback: (chargers: RNCharger[]) => void): EmitterSubscription;
 export declare function removeChargersObserver(callback: (chargers: RNCharger[]) => void): void;
 export declare function observeSessionsFromDate(startDateInMillis: Date, callback: (sessions: Session[]) => void): EmitterSubscription;

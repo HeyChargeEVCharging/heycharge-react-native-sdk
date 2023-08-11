@@ -30,6 +30,25 @@ class HeychargeSdk: RCTEventEmitter {
         HeyChargeSDK.setUserId(userId: userId)
     }
     
+    @objc func initializeChargers(_ propertyId: String) -> Void {
+        HeyChargeSDK.chargers().initializeChargers(propertyId: propertyId)
+    }
+
+    @objc func getUserPropertiesCombined(_ resolve: @escaping RCTPromiseResolveBlock, reject: @escaping RCTPromiseRejectBlock) {
+        print("before calling ios sdk")
+        guard let userProperties = HeyChargeSDK.chargers().getUserPropertiesCombined() else {
+            let error = NSError(domain: "heycharg-sdk", code: 0, userInfo: nil)
+            reject("USER_PROPERTIES_ERROR", "Error fetching user properties", error)
+            return
+        }
+        
+        let propertiesArray: [[String: String]] = userProperties.map { (key, value) in
+                return ["key": key, "value": value]
+            }
+
+            resolve(propertiesArray)
+    }
+    
     @objc func observeChargers() {
         let sdk = HeyChargeSDK.chargers()
         if(chargersCancellable == nil) {
