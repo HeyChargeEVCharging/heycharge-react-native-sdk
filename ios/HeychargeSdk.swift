@@ -41,12 +41,15 @@ class HeychargeSdk: RCTEventEmitter {
             reject("USER_PROPERTIES_ERROR", "Error fetching user properties", error)
             return
         }
-        
-        let propertiesArray: [[String: String]] = userProperties.map { (key, value) in
-                return ["key": key, "value": value]
-            }
-
-            resolve(propertiesArray)
+        let encoder = JSONEncoder()
+        encoder.outputFormatting = .prettyPrinted
+        do {
+            let jsonData = try encoder.encode(userProperties)
+            let jsonString = String(data: jsonData, encoding: .utf8)
+            resolve(jsonString);
+        } catch {
+            print("Failed to encode userProperties to JSON: \(error)")
+        }
     }
     
     @objc func observeChargers() {

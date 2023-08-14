@@ -39,12 +39,12 @@ export function initializeChargers(propertyId: string) {
 }
 
 export function getUserPropertiesCombined(
-  callback: (properties: { [key: string]: string }) => void,
+  callback: (properties: string) => void,
   errorCallback: (error: Error) => void
 ) {
   console.log('before called getUserPropertiesCombined from native');
   HeychargeSdk.getUserPropertiesCombined(
-    (properties: { [key: string]: string }) => {
+    (properties: string) => {
       console.log('User properties:', properties);
       callback(properties);
     },

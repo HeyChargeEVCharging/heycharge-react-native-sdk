@@ -33,24 +33,35 @@ class ChargersScreen extends Component {
 
   componentDidMount() {
     console.log('mhmd test>>> comp did mount started');
-    HeyCharge.getUserPropertiesCombined(
-      (userProperties) => {
-        console.log('mhmd test>>> got userProps');
-        const propertyEntries = Object.entries(userProperties);
-        const userPropertiesWithId = propertyEntries.map(([id, name]) => ({
-          id,
-          name,
-        }));
-        const defaultSelectedProperty =
-          userPropertiesWithId.length > 0 ? userPropertiesWithId[0]!.id : '';
+    // HeyCharge.getUserPropertiesCombined(
+    //   (userProperties) => {
+    //     console.log('mhmd test>>> got userProps');
+    //     const propertyEntries = Object.entries(userProperties);
+    //     const userPropertiesWithId = propertyEntries.map(([id, name]) => ({
+    //       id,
+    //       name,
+    //     }));
+    //     const defaultSelectedProperty =
+    //       userPropertiesWithId.length > 0 ? userPropertiesWithId[0]!.id : '';
 
-        this.setState({
-          userProperties: userPropertiesWithId,
-          selectedProperty: defaultSelectedProperty,
-        });
+    //     this.setState({
+    //       userProperties: userPropertiesWithId,
+    //       selectedProperty: defaultSelectedProperty,
+    //     });
+    //   },
+    //   (error) => {
+    //     console.error('Error fetching user properties:', error);
+    //   }
+    // );
+
+    HeyCharge.getUserPropertiesCombined(
+      (properties) => {
+        console.log('User Properties:', properties);
+        // Handle the user properties data here
       },
       (error) => {
         console.error('Error fetching user properties:', error);
+        // Handle the error here
       }
     );
   }
