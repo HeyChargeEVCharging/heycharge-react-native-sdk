@@ -33,7 +33,7 @@ class HeychargeSdk: RCTEventEmitter {
     @objc func initializeChargers(_ propertyId: String) -> Void {
         HeyChargeSDK.chargers().initializeChargers(propertyId: propertyId)
     }
-
+    
     @objc func getUserPropertiesCombined(_ resolve: @escaping RCTPromiseResolveBlock, reject: @escaping RCTPromiseRejectBlock) {
         print("before calling ios sdk")
         guard let userProperties = HeyChargeSDK.chargers().getUserPropertiesCombined() else {
