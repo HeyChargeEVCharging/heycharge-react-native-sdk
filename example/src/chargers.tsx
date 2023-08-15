@@ -31,38 +31,38 @@ class ChargersScreen extends Component {
     this.setState({ chargers: chargers, isLoading: false });
   };
 
-  componentDidMount() {
-    console.log('mhmd test>>> comp did mount started');
-    // HeyCharge.getUserPropertiesCombined(
-    //   (userProperties) => {
-    //     console.log('mhmd test>>> got userProps');
-    //     const propertyEntries = Object.entries(userProperties);
-    //     const userPropertiesWithId = propertyEntries.map(([id, name]) => ({
-    //       id,
-    //       name,
-    //     }));
-    //     const defaultSelectedProperty =
-    //       userPropertiesWithId.length > 0 ? userPropertiesWithId[0]!.id : '';
+  parseUserProperties(userPropertiesString: string) {
+    try {
+      const parsedResult = JSON.parse(userPropertiesString);
 
-    //     this.setState({
-    //       userProperties: userPropertiesWithId,
-    //       selectedProperty: defaultSelectedProperty,
-    //     });
-    //   },
-    //   (error) => {
-    //     console.error('Error fetching user properties:', error);
-    //   }
-    // );
+      const userProperties = Object.entries(parsedResult).map(([id, name]) => ({
+        id,
+        name,
+      }));
+      return userProperties;
+    } catch (error) {
+      console.log('Error parsing JSON:', error);
+      return null;
+    }
+  }
 
-    HeyCharge.getUserPropertiesCombined()
-      .then((properties) => {
-        // Do something with the properties
-        console.log('Received user properties:', properties);
-      })
-      .catch((error) => {
-        // Handle the error
-        console.error('Error fetching user properties:', error);
+  async componentDidMount() {
+    const userPropertiesString = await HeyCharge.getUserPropertiesCombined();
+    const parsedPropertiesDict = this.parseUserProperties(
+      userPropertiesString as string
+    );
+
+    if (parsedPropertiesDict != null) {
+      const defaultSelectedProperty =
+        parsedPropertiesDict.length > 0 ? parsedPropertiesDict[0]!.id : '';
+
+      this.setState({
+        userProperties: parsedPropertiesDict,
+        selectedProperty: defaultSelectedProperty,
       });
+
+      this.setSelectedProperty(defaultSelectedProperty);
+    }
   }
 
   componentWillUnmount() {
@@ -85,7 +85,7 @@ class ChargersScreen extends Component {
           selectedValue={this.state.selectedProperty}
           onValueChange={(itemValue) => this.setSelectedProperty(itemValue)}
         >
-          <Picker.Item label="Select Property" value="" />
+          <Picker.Item />
           {this.state.userProperties.map((property) => (
             <Picker.Item
               key={property.id}
@@ -101,6 +101,12 @@ class ChargersScreen extends Component {
           >
             <ActivityIndicator size="large" color="blue" />
           </View>
+        ) : this.state.chargers.length === 0 ? (
+          <View
+            style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}
+          >
+            <Text>No chargers have been assigned to this property....</Text>
+          </View>
         ) : (
           <FlatList
             data={this.state.chargers}
@@ -110,6 +116,7 @@ class ChargersScreen extends Component {
       </View>
     );
   }
+  
 }
 
 export default ChargersScreen;
