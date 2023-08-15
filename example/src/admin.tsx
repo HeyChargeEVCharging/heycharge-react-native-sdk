@@ -7,6 +7,7 @@ import {
   Button,
   EmitterSubscription,
 } from 'react-native';
+import { Picker } from '@react-native-picker/picker';
 import * as HeyCharge from '@heycharge/heycharge-react-native-sdk';
 import Card from './card';
 import {
@@ -16,7 +17,12 @@ import {
 } from '@heycharge/heycharge-react-native-sdk';
 
 class AdminScreen extends Component {
-  state = { chargers: [], otaProgress: 0 };
+  state = {
+    chargers: [],
+    userProperties: [] as { id: string; name: string }[],
+    selectedProperty: '',
+    otaProgress: 0,
+  };
   private chargersEventListener: EmitterSubscription | null = null;
   private otaEventListener: EmitterSubscription | null = null;
 
@@ -24,7 +30,42 @@ class AdminScreen extends Component {
     this.setState({ chargers: chargers });
   };
 
-  componentDidMount() {
+  parseUserProperties(userPropertiesString: string) {
+    try {
+      const parsedResult = JSON.parse(userPropertiesString);
+
+      const userProperties = Object.entries(parsedResult).map(([id, name]) => ({
+        id,
+        name,
+      }));
+      return userProperties;
+    } catch (error) {
+      console.log('Error parsing JSON:', error);
+      return null;
+    }
+  }
+
+  async componentDidMount() {
+    const userPropertiesString = await HeyCharge.getUserPropertiesCombined();
+    const parsedPropertiesDict = this.parseUserProperties(
+      userPropertiesString as string
+    );
+
+    if (parsedPropertiesDict != null) {
+      const defaultSelectedProperty =
+        parsedPropertiesDict.length > 0 ? parsedPropertiesDict[0]!.id : '';
+
+      this.setState({
+        userProperties: parsedPropertiesDict,
+        selectedProperty: defaultSelectedProperty,
+      });
+
+      this.setSelectedProperty(defaultSelectedProperty);
+    }
+  }
+  setSelectedProperty(itemValue: string) {
+    this.setState({ selectedProperty: itemValue });
+    HeyCharge.initializeChargers(itemValue);
     this.chargersEventListener = HeyCharge.observeChargers(this.callback);
   }
 
@@ -64,16 +105,39 @@ class AdminScreen extends Component {
       );
     }
     return (
-      <View>
-        <FlatList
-          data={this.state.chargers}
-          renderItem={({ item }) => (
-            <AdminChargerView
-              chargerItem={item}
-              onUpdatePressed={(charger: Charger) => this.startUpdate(charger)}
+      <View style={{ flex: 1 }}>
+        <Picker
+          selectedValue={this.state.selectedProperty}
+          onValueChange={(itemValue) => this.setSelectedProperty(itemValue)}
+        >
+          <Picker.Item />
+          {this.state.userProperties.map((property) => (
+            <Picker.Item
+              key={property.id}
+              label={property.name}
+              value={property.id}
             />
-          )}
-        />
+          ))}
+        </Picker>
+        {this.state.chargers.length === 0 ? (
+          <View
+            style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}
+          >
+            <Text>No chargers have been assigned to this property....</Text>
+          </View>
+        ) : (
+          <FlatList
+            data={this.state.chargers}
+            renderItem={({ item }) => (
+              <AdminChargerView
+                chargerItem={item}
+                onUpdatePressed={(charger: Charger) =>
+                  this.startUpdate(charger)
+                }
+              />
+            )}
+          />
+        )}
       </View>
     );
   }
