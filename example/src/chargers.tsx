@@ -54,16 +54,15 @@ class ChargersScreen extends Component {
     //   }
     // );
 
-    HeyCharge.getUserPropertiesCombined(
-      (properties) => {
-        console.log('User Properties:', properties);
-        // Handle the user properties data here
-      },
-      (error) => {
+    HeyCharge.getUserPropertiesCombined()
+      .then((properties) => {
+        // Do something with the properties
+        console.log('Received user properties:', properties);
+      })
+      .catch((error) => {
+        // Handle the error
         console.error('Error fetching user properties:', error);
-        // Handle the error here
-      }
-    );
+      });
   }
 
   componentWillUnmount() {

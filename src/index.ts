@@ -38,22 +38,22 @@ export function initializeChargers(propertyId: string) {
   HeychargeSdk.initializeChargers(propertyId);
 }
 
-export function getUserPropertiesCombined(
-  callback: (properties: string) => void,
-  errorCallback: (error: Error) => void
-) {
-  console.log('before called getUserPropertiesCombined from native');
-  HeychargeSdk.getUserPropertiesCombined(
-    (properties: string) => {
-      console.log('User properties:', properties);
-      callback(properties);
-    },
-    (error: Error) => {
-      console.error('Error fetching user properties:', error);
-      errorCallback(error);
-    }
-  );
+export function getUserPropertiesCombined(): Promise<string> {
+  return new Promise((resolve, reject) => {
+    console.log('before calling getUserPropertiesCombined from native');
+    HeychargeSdk.getUserPropertiesCombined(
+      (properties: string) => {
+        console.log('User properties:', properties);
+        resolve(properties);
+      },
+      (error: Error) => {
+        console.error('Error fetching user properties:', error);
+        reject(error);
+      }
+    );
+  });
 }
+
 
 export function observeChargers(
   callback: (chargers: RNCharger[]) => void
