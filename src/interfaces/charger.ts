@@ -30,7 +30,7 @@ export enum ChargerState {
   BOOT = 8,
   CHARGING_STOP_INITIATED = 9,
   HOST_OTA = 10,
-  OTA = 99,
+  OTA = 100,
 }
 
 export enum ChargerType {
