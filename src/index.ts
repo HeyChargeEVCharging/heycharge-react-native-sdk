@@ -34,21 +34,12 @@ export function setUserId(userId: string) {
   HeychargeSdk.setUserId(userId);
 }
 
-export function initializeChargers(propertyId: string) {
-  HeychargeSdk.initializeChargers(propertyId);
-}
-
-export async function getUserPropertiesCombined() {
-  const result = await HeychargeSdk.getUserPropertiesCombined();
-  if (result.error) {
-    console.log(result.error);
-    return;
-  } else {
-    return result;
-  }
+export function getUserPropertiesCombined(): Promise<null> {
+  return HeychargeSdk.getUserPropertiesCombined();
 }
 
 export function observeChargers(
+  propertyId: string,
   callback: (chargers: RNCharger[]) => void
 ): EmitterSubscription {
   const eventEmitter = new NativeEventEmitter(HeychargeSdk);
@@ -62,9 +53,10 @@ export function observeChargers(
     }
   );
   if (Platform.OS === 'ios') {
+    HeychargeSdk.initializeChargers(propertyId);
     HeychargeSdk.observeChargers();
   } else {
-    HeychargeSdk.observeChargers(callback);
+    HeychargeSdk.observeChargers(propertyId, callback);
   }
   return eventListener;
 }

@@ -76,7 +76,15 @@ class HeychargeSdkModule(
   }
 
   @ReactMethod
-  fun observeChargers(callback: Callback) {
+  fun getUserPropertiesCombined(promise: Promise) {
+    val properties = HeyChargeSDK.chargers().userPropertiesCombined
+    val gson = Gson()
+    val jsonString = gson.toJson(properties)
+    promise.resolve(jsonString)
+  }
+
+  @ReactMethod
+  fun observeChargers(propertyId: String, callback: Callback) {
     ui.post {
       removeChargersObserverInternal(callback)
       val chargersCallback = object : GetDataCallback<List<Charger>> {
@@ -100,7 +108,7 @@ class HeychargeSdkModule(
         }
       }
       chargersCallbacks[callback] = chargersCallback
-      HeyChargeSDK.chargers().observeChargers(chargersCallback)
+      HeyChargeSDK.chargers().observeChargers(propertyId,chargersCallback)
     }
   }
 
@@ -228,7 +236,7 @@ class HeychargeSdkModule(
   }
 
   private fun ensureChargerJsonIsValid(chargerJson: String, promise: Promise): Charger? {
-    val charger = Charger.fromJson(chargerJson)
+    val charger = (Charger.Companion::fromJson)(chargerJson)
     if (charger == null) {
       promise.reject(Exception("Something went wrong."))
       return null
@@ -237,7 +245,7 @@ class HeychargeSdkModule(
   }
 
   private fun ensureChargerJsonIsValid(chargerJson: String, callback: Callback): Charger? {
-    val charger = Charger.fromJson(chargerJson)
+    val charger = (Charger.Companion::fromJson)(chargerJson)
     if (charger == null) {
       callback.invoke("Something went wrong.")
       return null

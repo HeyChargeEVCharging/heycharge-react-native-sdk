@@ -6,6 +6,7 @@ import {
   FlatList,
   Button,
   EmitterSubscription,
+  Platform,
 } from 'react-native';
 import { Picker } from '@react-native-picker/picker';
 import * as HeyCharge from '@heycharge/heycharge-react-native-sdk';
@@ -65,10 +66,11 @@ class AdminScreen extends Component {
   }
   setSelectedProperty(itemValue: string) {
     this.setState({ selectedProperty: itemValue });
-    HeyCharge.initializeChargers(itemValue);
-    this.chargersEventListener = HeyCharge.observeChargers(this.callback);
+    this.chargersEventListener = HeyCharge.observeChargers(
+      itemValue,
+      this.callback
+    );
   }
-
   componentWillUnmount() {
     this.chargersEventListener?.remove();
     this.otaEventListener?.remove();

@@ -72,8 +72,8 @@ class ChargersScreen extends Component {
 
   setSelectedProperty(itemValue: string) {
     this.setState({ selectedProperty: itemValue });
-    HeyCharge.initializeChargers(itemValue);
     this.chargersEventListener = HeyCharge.observeChargers(
+      itemValue,
       this.chargersCallback
     );
   }
@@ -116,7 +116,6 @@ class ChargersScreen extends Component {
       </View>
     );
   }
-  
 }
 
 export default ChargersScreen;

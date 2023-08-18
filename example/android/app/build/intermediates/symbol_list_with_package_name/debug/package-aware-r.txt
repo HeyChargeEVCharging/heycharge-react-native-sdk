@@ -55,6 +55,7 @@ anim rns_slide_in_from_right
 anim rns_slide_out_to_bottom
 anim rns_slide_out_to_left
 anim rns_slide_out_to_right
+anim rns_standard_accelerate_interpolator
 animator design_appbar_state_list_animator
 animator design_fab_hide_motion_spec
 animator design_fab_show_motion_spec
@@ -1396,6 +1397,7 @@ drawable design_password_eye
 drawable design_snackbar_background
 drawable ic_calendar_black_24dp
 drawable ic_clear_black_24dp
+drawable ic_dropdown
 drawable ic_edit_black_24dp
 drawable ic_keyboard_arrow_left_black_24dp
 drawable ic_keyboard_arrow_right_black_24dp
@@ -1430,6 +1432,7 @@ drawable notify_panel_notification_icon_bg
 drawable overlay
 drawable redbox_top_border_background
 drawable rn_edit_text_material
+drawable spinner_dropdown_background
 drawable test_custom_background
 drawable test_level_drawable
 drawable tooltip_frame_dark
@@ -1485,6 +1488,7 @@ id accessibility_label
 id accessibility_links
 id accessibility_role
 id accessibility_state
+id accessibility_state_expanded
 id accessibility_value
 id action_bar
 id action_bar_activity_content
@@ -1556,6 +1560,8 @@ id design_menu_item_text
 id design_navigation_view
 id dialog_button
 id disableHome
+id dropdown_background
+id dropdown_icon
 id dropdown_menu
 id edit_query
 id empty_end
@@ -1661,12 +1667,7 @@ id password_toggle
 id peekHeight
 id pickerWrapper
 id pin
-id pointer_enter
-id pointer_enter_capture
-id pointer_leave
-id pointer_leave_capture
-id pointer_move
-id pointer_move_capture
+id pointer_events
 id progress_circular
 id progress_horizontal
 id radio
@@ -1904,6 +1905,8 @@ layout redbox_view
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
+layout simple_spinner_dropdown_item
+layout simple_spinner_item
 layout support_simple_spinner_dropdown_item
 layout test_action_chip
 layout test_design_checkbox

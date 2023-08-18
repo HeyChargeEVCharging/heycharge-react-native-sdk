@@ -722,6 +722,7 @@ int id accessibility_label 0x0
 int id accessibility_links 0x0
 int id accessibility_role 0x0
 int id accessibility_state 0x0
+int id accessibility_state_expanded 0x0
 int id accessibility_value 0x0
 int id action_bar 0x0
 int id action_bar_activity_content 0x0
@@ -803,12 +804,7 @@ int id notification_main_column_container 0x0
 int id off 0x0
 int id on 0x0
 int id parentPanel 0x0
-int id pointer_enter 0x0
-int id pointer_enter_capture 0x0
-int id pointer_leave 0x0
-int id pointer_leave_capture 0x0
-int id pointer_move 0x0
-int id pointer_move_capture 0x0
+int id pointer_events 0x0
 int id progress_circular 0x0
 int id progress_horizontal 0x0
 int id radio 0x0

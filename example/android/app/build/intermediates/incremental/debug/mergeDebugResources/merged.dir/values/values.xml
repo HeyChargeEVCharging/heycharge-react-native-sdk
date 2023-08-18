@@ -578,6 +578,7 @@
     <item name="accessibility_links" type="id"/>
     <item name="accessibility_role" type="id"/>
     <item name="accessibility_state" type="id"/>
+    <item name="accessibility_state_expanded" type="id"/>
     <item name="accessibility_value" type="id"/>
     <item name="action_bar_activity_content" type="id"/>
     <item name="action_bar_spinner" type="id"/>
@@ -597,12 +598,7 @@
     <item name="mtrl_child_content_container" type="id"/>
     <item name="mtrl_internal_children_alpha_tag" type="id"/>
     <item name="parent_matrix" type="id"/>
-    <item name="pointer_enter" type="id"/>
-    <item name="pointer_enter_capture" type="id"/>
-    <item name="pointer_leave" type="id"/>
-    <item name="pointer_leave_capture" type="id"/>
-    <item name="pointer_move" type="id"/>
-    <item name="pointer_move_capture" type="id"/>
+    <item name="pointer_events" type="id"/>
     <item name="progress_circular" type="id"/>
     <item name="progress_horizontal" type="id"/>
     <item name="react_test_id" type="id"/>
