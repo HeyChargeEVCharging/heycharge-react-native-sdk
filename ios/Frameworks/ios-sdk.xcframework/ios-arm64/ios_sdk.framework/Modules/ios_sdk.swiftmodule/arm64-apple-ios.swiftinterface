@@ -105,9 +105,6 @@ public struct Charger : Swift.Identifiable, Swift.Hashable, Swift.Equatable, Swi
   public init(from decoder: Swift.Decoder) throws
 }
 @_hasMissingDesignatedInitializers final public class UserSDK {
-  #if compiler(>=5.3) && $AsyncAwait
-  final public func getCurrentUser() async throws -> ios_sdk.User?
-  #endif
   @objc deinit
 }
 public struct ChargerConnector : Swift.Identifiable, Swift.Hashable, Swift.Equatable, Swift.Codable {
@@ -115,18 +112,6 @@ public struct ChargerConnector : Swift.Identifiable, Swift.Hashable, Swift.Equat
   public func hash(into hasher: inout Swift.Hasher)
   public static func == (a: ios_sdk.ChargerConnector, b: ios_sdk.ChargerConnector) -> Swift.Bool
   public typealias ID = Swift.Int
-  public func encode(to encoder: Swift.Encoder) throws
-  public var hashValue: Swift.Int {
-    get
-  }
-  public init(from decoder: Swift.Decoder) throws
-}
-public struct User : Swift.Identifiable, Swift.Hashable, Swift.Equatable, Swift.Codable {
-  public let id: Swift.String
-  public let isBuildingAdmin: Swift.Bool
-  public func hash(into hasher: inout Swift.Hasher)
-  public static func == (a: ios_sdk.User, b: ios_sdk.User) -> Swift.Bool
-  public typealias ID = Swift.String
   public func encode(to encoder: Swift.Encoder) throws
   public var hashValue: Swift.Int {
     get
