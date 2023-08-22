@@ -34,20 +34,30 @@ class HeychargeSdk: RCTEventEmitter {
         HeyChargeSDK.chargers().initializeChargers(propertyId: propertyId)
     }
     
-    @objc func getUserPropertiesCombined(_ resolve: @escaping RCTPromiseResolveBlock, reject: @escaping RCTPromiseRejectBlock) {
-        guard let userProperties = HeyChargeSDK.chargers().getUserPropertiesCombined() else {
-            let error = NSError(domain: "heycharge-sdk", code: 0, userInfo: nil)
-            reject("USER_PROPERTIES_ERROR", "Error fetching user properties", error)
-            return
-        }
-        let encoder = JSONEncoder()
-        encoder.outputFormatting = .prettyPrinted
-        do {
-            let jsonData = try encoder.encode(userProperties)
-            let jsonString = String(data: jsonData, encoding: .utf8)
-            resolve(jsonString);
-        } catch {
-            print("Failed to encode userProperties to JSON: \(error)")
+    @objc func getUserProperties(_ resolve: @escaping RCTPromiseResolveBlock, reject: @escaping RCTPromiseRejectBlock) {
+        Task {
+            guard let userProperties = await HeyChargeSDK.chargers().getUserProperties() else {
+                let error = NSError(domain: "heycharge-sdk", code: 0, userInfo: nil)
+                reject("USER_PROPERTIES_ERROR", "Error fetching user properties", error)
+                return
+            }
+            var rnProperties : [String] = []
+            let encoder = JSONEncoder()
+            encoder.outputFormatting = .prettyPrinted
+            
+            for property in userProperties {
+                let rnProperty = RNProperty(id: property.id, name: property.name)
+                do {
+                    let jsonData = try encoder.encode(rnProperty)
+                    let jsonString = String(data: jsonData, encoding: .utf8)
+                    if let jsonString = jsonString {
+                        rnProperties.append(jsonString)
+                    }
+                } catch {
+                    print("Failed to encode property to JSON: \(error)")
+                }
+            }
+            resolve(rnProperties);
         }
     }
     

@@ -14,6 +14,7 @@ import Card from './card';
 import * as HeyCharge from '@heycharge/heycharge-react-native-sdk';
 import {
   type RNCharger,
+  type RNProperty,
   type Charger,
   ChargerState,
 } from '@heycharge/heycharge-react-native-sdk';
@@ -22,7 +23,7 @@ class ChargersScreen extends Component {
   state = {
     chargers: [],
     isLoading: true,
-    userProperties: [] as { id: string; name: string }[],
+    userProperties: [] as RNProperty[],
     selectedProperty: '',
   };
   private chargersEventListener: EmitterSubscription | null = null;
@@ -31,33 +32,16 @@ class ChargersScreen extends Component {
     this.setState({ chargers: chargers, isLoading: false });
   };
 
-  parseUserProperties(userPropertiesString: string) {
-    try {
-      const parsedResult = JSON.parse(userPropertiesString);
-
-      const userProperties = Object.entries(parsedResult).map(([id, name]) => ({
-        id,
-        name,
-      }));
-      return userProperties;
-    } catch (error) {
-      console.log('Error parsing JSON:', error);
-      return null;
-    }
-  }
-
   async componentDidMount() {
-    const userPropertiesString = await HeyCharge.getUserPropertiesCombined();
-    const parsedPropertiesDict = this.parseUserProperties(
-      userPropertiesString as string
-    );
+    const userProperties =
+      (await HeyCharge.getUserProperties()) as RNProperty[];
 
-    if (parsedPropertiesDict != null) {
+    if (userProperties != null) {
       const defaultSelectedProperty =
-        parsedPropertiesDict.length > 0 ? parsedPropertiesDict[0]!.id : '';
+        userProperties.length > 0 ? userProperties[0]!.id : '';
 
       this.setState({
-        userProperties: parsedPropertiesDict,
+        userProperties: userProperties,
         selectedProperty: defaultSelectedProperty,
       });
 

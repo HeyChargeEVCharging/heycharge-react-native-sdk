@@ -4,7 +4,7 @@ import {
   Platform,
   EmitterSubscription,
 } from 'react-native';
-import type { Charger, RNCharger, Session } from 'src/interfaces';
+import type { Charger, RNCharger, RNProperty, Session } from 'src/interfaces';
 
 //TODO: check why proxy was causing issues in iOS.
 const LINKING_ERROR =
@@ -34,8 +34,17 @@ export function setUserId(userId: string) {
   HeychargeSdk.setUserId(userId);
 }
 
-export function getUserPropertiesCombined(): Promise<null> {
-  return HeychargeSdk.getUserPropertiesCombined();
+export async function getUserProperties(): Promise<RNProperty[] | null> {
+  try {
+    const userPropertiesJson = await HeychargeSdk.getUserProperties();
+    const userProperties: RNProperty[] = userPropertiesJson.map(
+      (item: string) => JSON.parse(item) as RNCharger
+    );
+    return userProperties;
+  } catch (error) {
+    console.log('Error fetching properties:', error);
+    return null;
+  }
 }
 
 export function observeChargers(

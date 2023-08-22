@@ -15,7 +15,7 @@
 RCT_EXTERN_METHOD(initialize:(NSString *)sdkKey)
 RCT_EXTERN_METHOD(setUserId:(NSString *)userId)
 RCT_EXTERN_METHOD(initializeChargers:(NSString *)propertyId)
-RCT_EXTERN_METHOD(getUserPropertiesCombined:(RCTPromiseResolveBlock)resolve reject:(RCTPromiseRejectBlock)reject)
+RCT_EXTERN_METHOD(getUserProperties:(RCTPromiseResolveBlock)resolve reject:(RCTPromiseRejectBlock)reject)
 RCT_EXTERN_METHOD(observeChargers)
 RCT_EXTERN_METHOD(removeChargersObserver)
 RCT_EXTERN_METHOD(observeSessionsFromDate:(nonnull NSNumber *)startDateInMillis callback:(nonnull RCTResponseSenderBlock)callback)
