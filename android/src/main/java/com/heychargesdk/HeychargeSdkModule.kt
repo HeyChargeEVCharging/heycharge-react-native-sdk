@@ -9,6 +9,7 @@ import com.heycharge.androidsdk.data.ChargingCommandCallback
 import com.heycharge.androidsdk.data.GetDataCallback
 import com.heycharge.androidsdk.data.OTACallback
 import com.heycharge.androidsdk.domain.Charger
+import com.heycharge.androidsdk.domain.Property
 import com.heycharge.androidsdk.domain.Session
 
 class HeychargeSdkModule(
@@ -19,6 +20,7 @@ class HeychargeSdkModule(
 
   private val rnChargersGson = Gson()
   private val sessionsGson = Gson()
+  private val propertiesGson = Gson()
   private val chargersEventName = "Chargers"
   private val sessionsEventName = "Sessions"
   private val otaEventName = "OTA"
@@ -76,11 +78,24 @@ class HeychargeSdkModule(
   }
 
   @ReactMethod
-  fun getUserPropertiesCombined(promise: Promise) {
-    val properties = HeyChargeSDK.chargers().userPropertiesCombined
-    val gson = Gson()
-    val jsonString = gson.toJson(properties)
-    promise.resolve(jsonString)
+  fun getUserProperties(promise: Promise) {
+    ui.post {
+      val propertiesCallback = object : GetDataCallback<List<Property>> {
+        override fun onGetDataFailure(exception: Exception) {
+        }
+
+        override fun onGetDataSuccess(data: List<Property>) {
+          val array = Arguments.createArray()
+          for (prop in data) {
+            val rnProperty = RNProperty(prop.id, prop.name)
+            val rnPropertyJson = propertiesGson.toJson(rnProperty, RNProperty::class.java)
+            array.pushString(rnPropertyJson)
+          }
+          promise.resolve(array)
+        }
+      }
+      HeyChargeSDK.chargers().getUserProperties(propertiesCallback)
+    }
   }
 
   @ReactMethod
