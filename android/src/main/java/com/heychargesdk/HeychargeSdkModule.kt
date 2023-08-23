@@ -82,13 +82,13 @@ class HeychargeSdkModule(
     ui.post {
       val propertiesCallback = object : GetDataCallback<List<Property>> {
         override fun onGetDataFailure(exception: Exception) {
+          promise.reject(Exception(exception.toString()))
         }
 
         override fun onGetDataSuccess(data: List<Property>) {
           val array = Arguments.createArray()
           for (prop in data) {
-            val rnProperty = RNProperty(prop.id, prop.name)
-            val rnPropertyJson = propertiesGson.toJson(rnProperty, RNProperty::class.java)
+            val rnPropertyJson = propertiesGson.toJson(prop, Property::class.java)
             array.pushString(rnPropertyJson)
           }
           promise.resolve(array)

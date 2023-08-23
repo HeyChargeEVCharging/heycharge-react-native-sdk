@@ -46,9 +46,8 @@ class HeychargeSdk: RCTEventEmitter {
             encoder.outputFormatting = .prettyPrinted
             
             for property in userProperties {
-                let rnProperty = RNProperty(id: property.id, name: property.name)
                 do {
-                    let jsonData = try encoder.encode(rnProperty)
+                    let jsonData = try encoder.encode(property)
                     let jsonString = String(data: jsonData, encoding: .utf8)
                     if let jsonString = jsonString {
                         rnProperties.append(jsonString)

@@ -6,7 +6,6 @@ import {
   FlatList,
   Button,
   EmitterSubscription,
-  Platform,
 } from 'react-native';
 import { Picker } from '@react-native-picker/picker';
 import * as HeyCharge from '@heycharge/heycharge-react-native-sdk';
@@ -34,11 +33,10 @@ class AdminScreen extends Component {
 
   async componentDidMount() {
     const userProperties =
-      (await HeyCharge.getUserProperties()) as RNProperty[];
+      (await HeyCharge.getUserProperties()) as unknown as RNProperty[];
 
-    if (userProperties != null) {
-      const defaultSelectedProperty =
-        userProperties.length > 0 ? userProperties[0]!.id : '';
+    if (userProperties != null && userProperties.length > 0) {
+      const defaultSelectedProperty = userProperties[0]!.id;
 
       this.setState({
         userProperties: userProperties,
@@ -92,19 +90,22 @@ class AdminScreen extends Component {
     }
     return (
       <View style={{ flex: 1 }}>
-        <Picker
-          selectedValue={this.state.selectedProperty}
-          onValueChange={(itemValue) => this.setSelectedProperty(itemValue)}
-        >
-          <Picker.Item />
-          {this.state.userProperties.map((property) => (
-            <Picker.Item
-              key={property.id}
-              label={property.name}
-              value={property.id}
-            />
-          ))}
-        </Picker>
+        {this.state.userProperties.length > 0 ? (
+          <Picker
+            selectedValue={this.state.selectedProperty}
+            onValueChange={(itemValue) => this.setSelectedProperty(itemValue)}
+          >
+            {this.state.userProperties.map((property) => (
+              <Picker.Item
+                key={property.id}
+                label={property.name}
+                value={property.id}
+              />
+            ))}
+          </Picker>
+        ) : (
+          <Text>Fetching user properties...</Text>
+        )}
         {this.state.chargers.length === 0 ? (
           <View
             style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}

@@ -2,9 +2,7 @@ import React, { Component } from 'react';
 import {
   Text,
   FlatList,
-  Button,
   EmitterSubscription,
-  Platform,
   ActivityIndicator,
   View,
   TouchableOpacity,
@@ -34,11 +32,10 @@ class ChargersScreen extends Component {
 
   async componentDidMount() {
     const userProperties =
-      (await HeyCharge.getUserProperties()) as RNProperty[];
+      (await HeyCharge.getUserProperties()) as unknown as RNProperty[];
 
-    if (userProperties != null) {
-      const defaultSelectedProperty =
-        userProperties.length > 0 ? userProperties[0]!.id : '';
+    if (userProperties != null && userProperties.length > 0) {
+      const defaultSelectedProperty = userProperties[0]!.id;
 
       this.setState({
         userProperties: userProperties,
@@ -65,19 +62,22 @@ class ChargersScreen extends Component {
   render() {
     return (
       <View style={{ flex: 1 }}>
-        <Picker
-          selectedValue={this.state.selectedProperty}
-          onValueChange={(itemValue) => this.setSelectedProperty(itemValue)}
-        >
-          <Picker.Item />
-          {this.state.userProperties.map((property) => (
-            <Picker.Item
-              key={property.id}
-              label={property.name}
-              value={property.id}
-            />
-          ))}
-        </Picker>
+        {this.state.userProperties.length > 0 ? (
+          <Picker
+            selectedValue={this.state.selectedProperty}
+            onValueChange={(itemValue) => this.setSelectedProperty(itemValue)}
+          >
+            {this.state.userProperties.map((property) => (
+              <Picker.Item
+                key={property.id}
+                label={property.name}
+                value={property.id}
+              />
+            ))}
+          </Picker>
+        ) : (
+          <Text>Fetching user properties...</Text>
+        )}
 
         {this.state.isLoading ? (
           <View
