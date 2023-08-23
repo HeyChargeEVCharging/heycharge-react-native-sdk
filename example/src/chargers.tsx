@@ -31,14 +31,19 @@ class ChargersScreen extends Component {
   };
 
   async componentDidMount() {
-    const userProperties =
-      (await HeyCharge.getUserProperties()) as unknown as RNProperty[];
+    const fetchedUserProperties = await HeyCharge.getUserProperties();
 
-    if (userProperties != null && userProperties.length > 0) {
-      const defaultSelectedProperty = userProperties[0]!.id;
+    if (fetchedUserProperties == null) {
+      return;
+    }
+
+    const userPropertiesList = fetchedUserProperties as RNProperty[];
+
+    if (userPropertiesList.length > 0) {
+      const defaultSelectedProperty = userPropertiesList[0]!.id;
 
       this.setState({
-        userProperties: userProperties,
+        userProperties: userPropertiesList,
         selectedProperty: defaultSelectedProperty,
       });
 

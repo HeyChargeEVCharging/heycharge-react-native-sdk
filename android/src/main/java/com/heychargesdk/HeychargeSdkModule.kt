@@ -80,18 +80,22 @@ class HeychargeSdkModule(
   @ReactMethod
   fun getUserProperties(promise: Promise) {
     ui.post {
-      val propertiesCallback = object : GetDataCallback<List<Property>> {
+      val propertiesCallback = object : GetDataCallback<List<Property>?> {
         override fun onGetDataFailure(exception: Exception) {
-          promise.reject(Exception(exception.toString()))
+          promise.reject(exception)
         }
 
-        override fun onGetDataSuccess(data: List<Property>) {
+        override fun onGetDataSuccess(data: List<Property>?) {
           val array = Arguments.createArray()
-          for (prop in data) {
-            val rnPropertyJson = propertiesGson.toJson(prop, Property::class.java)
-            array.pushString(rnPropertyJson)
+          if (data != null) {
+            for (prop in data) {
+                  val rnPropertyJson = propertiesGson.toJson(prop, Property::class.java)
+                  array.pushString(rnPropertyJson)
+            }
+            promise.resolve(array)
+          } else {
+            promise.reject(Exception("Could not fetch properties"))
           }
-          promise.resolve(array)
         }
       }
       HeyChargeSDK.chargers().getUserProperties(propertiesCallback)
@@ -251,7 +255,7 @@ class HeychargeSdkModule(
   }
 
   private fun ensureChargerJsonIsValid(chargerJson: String, promise: Promise): Charger? {
-    val charger = (Charger.Companion::fromJson)(chargerJson)
+    val charger = Charger.fromJson(chargerJson)
     if (charger == null) {
       promise.reject(Exception("Something went wrong."))
       return null
@@ -260,7 +264,7 @@ class HeychargeSdkModule(
   }
 
   private fun ensureChargerJsonIsValid(chargerJson: String, callback: Callback): Charger? {
-    val charger = (Charger.Companion::fromJson)(chargerJson)
+    val charger = Charger.fromJson(chargerJson)
     if (charger == null) {
       callback.invoke("Something went wrong.")
       return null
