@@ -6,9 +6,9 @@ import LoginScreen from './login';
 import HomeScreen from './home';
 
 // dev
-const testSdkKey = 'hc_sdk_KTrCsT64MbSBECjDejVNVKgu35n9t99G';
+// const testSdkKey = 'hc_sdk_KTrCsT64MbSBECjDejVNVKgu35n9t99G';
 // prod
-// const testSdkKey = "hc_sdk_399zzFUHpP6E6IWGcbbnR4st"
+const testSdkKey = 'hc_sdk_399zzFUHpP6E6IWGcbbnR4st';
 const Stack = createNativeStackNavigator();
 
 function App() {
