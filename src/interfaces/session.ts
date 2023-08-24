@@ -1,5 +1,5 @@
-export interface Session{
+export interface Session {
   chargerName: String;
-  endDate: number
+  endDate: number;
   chargeAmount: number;
 }

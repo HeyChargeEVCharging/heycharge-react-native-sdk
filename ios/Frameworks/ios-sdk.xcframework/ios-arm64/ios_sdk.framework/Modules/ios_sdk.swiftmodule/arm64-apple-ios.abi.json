@@ -320,6 +320,16 @@
       },
       {
         "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ios_sdk",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "GRDB",
         "printedName": "GRDB",
         "declKind": "Import",
@@ -948,6 +958,317 @@
         "moduleName": "ios_sdk",
         "declAttributes": [
           "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ios_sdk",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Property",
+        "printedName": "Property",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "id",
+            "printedName": "id",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:7ios_sdk8PropertyV2idSSvp",
+            "mangledName": "$s7ios_sdk8PropertyV2idSSvp",
+            "moduleName": "ios_sdk",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7ios_sdk8PropertyV2idSSvg",
+                "mangledName": "$s7ios_sdk8PropertyV2idSSvg",
+                "moduleName": "ios_sdk",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "name",
+            "printedName": "name",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:7ios_sdk8PropertyV4nameSSvp",
+            "mangledName": "$s7ios_sdk8PropertyV4nameSSvp",
+            "moduleName": "ios_sdk",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7ios_sdk8PropertyV4nameSSvg",
+                "mangledName": "$s7ios_sdk8PropertyV4nameSSvg",
+                "moduleName": "ios_sdk",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Property",
+                "printedName": "ios_sdk.Property",
+                "usr": "s:7ios_sdk8PropertyV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:7ios_sdk8PropertyV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s7ios_sdk8PropertyV4fromACs7Decoder_p_tKcfc",
+            "moduleName": "ios_sdk",
+            "implicit": true,
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:7ios_sdk8PropertyV9hashValueSivp",
+            "mangledName": "$s7ios_sdk8PropertyV9hashValueSivp",
+            "moduleName": "ios_sdk",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7ios_sdk8PropertyV9hashValueSivg",
+                "mangledName": "$s7ios_sdk8PropertyV9hashValueSivg",
+                "moduleName": "ios_sdk",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:7ios_sdk8PropertyV4hash4intoys6HasherVz_tF",
+            "mangledName": "$s7ios_sdk8PropertyV4hash4intoys6HasherVz_tF",
+            "moduleName": "ios_sdk",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Property",
+                "printedName": "ios_sdk.Property",
+                "usr": "s:7ios_sdk8PropertyV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Property",
+                "printedName": "ios_sdk.Property",
+                "usr": "s:7ios_sdk8PropertyV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:7ios_sdk8PropertyV2eeoiySbAC_ACtFZ",
+            "mangledName": "$s7ios_sdk8PropertyV2eeoiySbAC_ACtFZ",
+            "moduleName": "ios_sdk",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:7ios_sdk8PropertyV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s7ios_sdk8PropertyV6encode2toys7Encoder_p_tKF",
+            "moduleName": "ios_sdk",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:7ios_sdk8PropertyV",
+        "mangledName": "$s7ios_sdk8PropertyV",
+        "moduleName": "ios_sdk",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Identifiable",
+            "printedName": "Identifiable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "ID",
+                "printedName": "ID",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s12IdentifiableP",
+            "mangledName": "$ss12IdentifiableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          }
         ]
       },
       {
@@ -3663,6 +3984,16 @@
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
+        "moduleName": "ios_sdk",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
         "moduleName": "ios_sdk"
       },
       {
@@ -4452,6 +4783,71 @@
         "name": "ChargerSDK",
         "printedName": "ChargerSDK",
         "children": [
+          {
+            "kind": "Function",
+            "name": "getUserProperties",
+            "printedName": "getUserProperties()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[ios_sdk.Property]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[ios_sdk.Property]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Property",
+                        "printedName": "ios_sdk.Property",
+                        "usr": "s:7ios_sdk8PropertyV"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:7ios_sdk10ChargerSDKC17getUserPropertiesSayAA8PropertyVGSgyYaF",
+            "mangledName": "$s7ios_sdk10ChargerSDKC17getUserPropertiesSayAA8PropertyVGSgyYaF",
+            "moduleName": "ios_sdk",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "initializeChargers",
+            "printedName": "initializeChargers(propertyId:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:7ios_sdk10ChargerSDKC18initializeChargers10propertyIdySS_tF",
+            "mangledName": "$s7ios_sdk10ChargerSDKC18initializeChargers10propertyIdySS_tF",
+            "moduleName": "ios_sdk",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
           {
             "kind": "Function",
             "name": "observeChargers",
@@ -7675,14 +8071,14 @@
     {
       "filePath": "\/Users\/muhammad\/Desktop\/dev\/heycharge\/ios-sdk\/ios-sdk\/Data\/Http\/HttpClient.swift",
       "kind": "Dictionary",
-      "offset": 698,
+      "offset": 697,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/muhammad\/Desktop\/dev\/heycharge\/ios-sdk\/ios-sdk\/Data\/Http\/HttpClient.swift",
       "kind": "Dictionary",
-      "offset": 956,
+      "offset": 955,
       "length": 3,
       "value": "[]"
     },
@@ -13730,7 +14126,7 @@
     {
       "filePath": "\/Users\/muhammad\/Desktop\/dev\/heycharge\/ios-sdk\/ios-sdk\/Domain\/UserDB.swift",
       "kind": "StringLiteral",
-      "offset": 784,
+      "offset": 1083,
       "length": 7,
       "value": "\"users\""
     },

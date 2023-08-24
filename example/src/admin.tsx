@@ -7,16 +7,23 @@ import {
   Button,
   EmitterSubscription,
 } from 'react-native';
+import { Picker } from '@react-native-picker/picker';
 import * as HeyCharge from '@heycharge/heycharge-react-native-sdk';
 import Card from './card';
 import {
   type RNCharger,
+  type RNProperty,
   type Charger,
   ChargerState,
 } from '@heycharge/heycharge-react-native-sdk';
 
 class AdminScreen extends Component {
-  state = { chargers: [], otaProgress: 0 };
+  state = {
+    chargers: [],
+    userProperties: [] as RNProperty[],
+    selectedProperty: '',
+    otaProgress: 0,
+  };
   private chargersEventListener: EmitterSubscription | null = null;
   private otaEventListener: EmitterSubscription | null = null;
 
@@ -24,10 +31,34 @@ class AdminScreen extends Component {
     this.setState({ chargers: chargers });
   };
 
-  componentDidMount() {
-    this.chargersEventListener = HeyCharge.observeChargers(this.callback);
+  async componentDidMount() {
+    const fetchedUserProperties = await HeyCharge.getUserProperties();
+
+    if (fetchedUserProperties == null) {
+      return;
+    }
+
+    const userPropertiesList = fetchedUserProperties as RNProperty[];
+
+    if (userPropertiesList.length > 0) {
+      const defaultSelectedProperty = userPropertiesList[0]!.id;
+
+      this.setState({
+        userProperties: userPropertiesList,
+        selectedProperty: defaultSelectedProperty,
+      });
+
+      this.setSelectedProperty(defaultSelectedProperty);
+    }
   }
 
+  setSelectedProperty(itemValue: string) {
+    this.setState({ selectedProperty: itemValue });
+    this.chargersEventListener = HeyCharge.observeChargers(
+      itemValue,
+      this.callback
+    );
+  }
   componentWillUnmount() {
     this.chargersEventListener?.remove();
     this.otaEventListener?.remove();
@@ -64,16 +95,42 @@ class AdminScreen extends Component {
       );
     }
     return (
-      <View>
-        <FlatList
-          data={this.state.chargers}
-          renderItem={({ item }) => (
-            <AdminChargerView
-              chargerItem={item}
-              onUpdatePressed={(charger: Charger) => this.startUpdate(charger)}
-            />
-          )}
-        />
+      <View style={{ flex: 1 }}>
+        {this.state.userProperties.length > 0 ? (
+          <Picker
+            selectedValue={this.state.selectedProperty}
+            onValueChange={(itemValue) => this.setSelectedProperty(itemValue)}
+          >
+            {this.state.userProperties.map((property) => (
+              <Picker.Item
+                key={property.id}
+                label={property.name}
+                value={property.id}
+              />
+            ))}
+          </Picker>
+        ) : (
+          <Text>Fetching user properties...</Text>
+        )}
+        {this.state.chargers.length === 0 ? (
+          <View
+            style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}
+          >
+            <Text>No chargers have been assigned to this property....</Text>
+          </View>
+        ) : (
+          <FlatList
+            data={this.state.chargers}
+            renderItem={({ item }) => (
+              <AdminChargerView
+                chargerItem={item}
+                onUpdatePressed={(charger: Charger) =>
+                  this.startUpdate(charger)
+                }
+              />
+            )}
+          />
+        )}
       </View>
     );
   }

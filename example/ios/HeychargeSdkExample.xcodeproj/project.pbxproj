@@ -9,8 +9,9 @@
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* HeychargeSdkExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* HeychargeSdkExampleTests.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
+		1AB3F6A5A35F64883AC53ED6 /* libPods-HeychargeSdkExample-HeychargeSdkExampleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 06E5C135F8BA08ACE4656D66 /* libPods-HeychargeSdkExample-HeychargeSdkExampleTests.a */; };
+		5254F5D62A851D2300470F78 /* ios-sdk.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B2304322A83EDDC00CE4865 /* ios-sdk.xcframework */; };
 		525CF385299BCA83002A9FBB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525CF384299BCA83002A9FBB /* AppDelegate.swift */; };
-		6B9AC24C2A840BE80070C78A /* ios-sdk.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B2304322A83EDDC00CE4865 /* ios-sdk.xcframework */; };
 		6B9AC24D2A840BE80070C78A /* ios-sdk.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6B2304322A83EDDC00CE4865 /* ios-sdk.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		D1BB432412EE584D9818BDEC /* libPods-HeychargeSdkExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 65BF6262DB573EF5E2D752EA /* libPods-HeychargeSdkExample.a */; };
@@ -44,6 +45,7 @@
 		00E356EE1AD99517003FC87E /* HeychargeSdkExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HeychargeSdkExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* HeychargeSdkExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HeychargeSdkExampleTests.m; sourceTree = "<group>"; };
+		06E5C135F8BA08ACE4656D66 /* libPods-HeychargeSdkExample-HeychargeSdkExampleTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HeychargeSdkExample-HeychargeSdkExampleTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07F961A680F5B00A75B9A /* HeychargeSdkExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeychargeSdkExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = HeychargeSdkExample/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = HeychargeSdkExample/Info.plist; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AB3F6A5A35F64883AC53ED6 /* libPods-HeychargeSdkExample-HeychargeSdkExampleTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,7 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B9AC24C2A840BE80070C78A /* ios-sdk.xcframework in Frameworks */,
+				5254F5D62A851D2300470F78 /* ios-sdk.xcframework in Frameworks */,
 				D1BB432412EE584D9818BDEC /* libPods-HeychargeSdkExample.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -118,6 +121,7 @@
 				523F154429C9DC1C00973DB0 /* Combine.framework */,
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				65BF6262DB573EF5E2D752EA /* libPods-HeychargeSdkExample.a */,
+				06E5C135F8BA08ACE4656D66 /* libPods-HeychargeSdkExample-HeychargeSdkExampleTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

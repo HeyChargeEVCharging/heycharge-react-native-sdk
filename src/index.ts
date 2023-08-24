@@ -4,7 +4,7 @@ import {
   Platform,
   EmitterSubscription,
 } from 'react-native';
-import type { Charger, RNCharger, Session } from 'src/interfaces';
+import type { Charger, RNCharger, RNProperty, Session } from 'src/interfaces';
 
 //TODO: check why proxy was causing issues in iOS.
 const LINKING_ERROR =
@@ -34,7 +34,21 @@ export function setUserId(userId: string) {
   HeychargeSdk.setUserId(userId);
 }
 
+export async function getUserProperties(): Promise<RNProperty[] | null> {
+  try {
+    const userPropertiesJson = await HeychargeSdk.getUserProperties();
+    const userProperties: RNProperty[] = userPropertiesJson.map(
+      (item: string) => JSON.parse(item) as RNCharger
+    );
+    return userProperties;
+  } catch (error) {
+    console.log('Error fetching properties:', error);
+    return null;
+  }
+}
+
 export function observeChargers(
+  propertyId: string,
   callback: (chargers: RNCharger[]) => void
 ): EmitterSubscription {
   const eventEmitter = new NativeEventEmitter(HeychargeSdk);
@@ -48,9 +62,10 @@ export function observeChargers(
     }
   );
   if (Platform.OS === 'ios') {
+    HeychargeSdk.initializeChargers(propertyId);
     HeychargeSdk.observeChargers();
   } else {
-    HeychargeSdk.observeChargers(callback);
+    HeychargeSdk.observeChargers(propertyId, callback);
   }
   return eventListener;
 }

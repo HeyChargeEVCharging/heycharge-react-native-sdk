@@ -2,17 +2,17 @@ import React, { Component } from 'react';
 import {
   Text,
   FlatList,
-  Button,
   EmitterSubscription,
-  Platform,
   ActivityIndicator,
   View,
   TouchableOpacity,
 } from 'react-native';
+import { Picker } from '@react-native-picker/picker';
 import Card from './card';
 import * as HeyCharge from '@heycharge/heycharge-react-native-sdk';
 import {
   type RNCharger,
+  type RNProperty,
   type Charger,
   ChargerState,
 } from '@heycharge/heycharge-react-native-sdk';
@@ -21,6 +21,8 @@ class ChargersScreen extends Component {
   state = {
     chargers: [],
     isLoading: true,
+    userProperties: [] as RNProperty[],
+    selectedProperty: '',
   };
   private chargersEventListener: EmitterSubscription | null = null;
 
@@ -28,10 +30,25 @@ class ChargersScreen extends Component {
     this.setState({ chargers: chargers, isLoading: false });
   };
 
-  componentDidMount() {
-    this.chargersEventListener = HeyCharge.observeChargers(
-      this.chargersCallback
-    );
+  async componentDidMount() {
+    const fetchedUserProperties = await HeyCharge.getUserProperties();
+
+    if (fetchedUserProperties == null) {
+      return;
+    }
+
+    const userPropertiesList = fetchedUserProperties as RNProperty[];
+
+    if (userPropertiesList.length > 0) {
+      const defaultSelectedProperty = userPropertiesList[0]!.id;
+
+      this.setState({
+        userProperties: userPropertiesList,
+        selectedProperty: defaultSelectedProperty,
+      });
+
+      this.setSelectedProperty(defaultSelectedProperty);
+    }
   }
 
   componentWillUnmount() {
@@ -39,22 +56,53 @@ class ChargersScreen extends Component {
     this.chargersEventListener?.remove();
   }
 
-  render() {
-    if (this.state.isLoading) {
-      return (
-        <View
-          style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}
-        >
-          <ActivityIndicator size="large" color="blue" />
-        </View>
-      );
-    }
+  setSelectedProperty(itemValue: string) {
+    this.setState({ selectedProperty: itemValue });
+    this.chargersEventListener = HeyCharge.observeChargers(
+      itemValue,
+      this.chargersCallback
+    );
+  }
 
+  render() {
     return (
-      <FlatList
-        data={this.state.chargers}
-        renderItem={({ item }) => <ChargerView chargerItem={item} />}
-      />
+      <View style={{ flex: 1 }}>
+        {this.state.userProperties.length > 0 ? (
+          <Picker
+            selectedValue={this.state.selectedProperty}
+            onValueChange={(itemValue) => this.setSelectedProperty(itemValue)}
+          >
+            {this.state.userProperties.map((property) => (
+              <Picker.Item
+                key={property.id}
+                label={property.name}
+                value={property.id}
+              />
+            ))}
+          </Picker>
+        ) : (
+          <Text>Fetching user properties...</Text>
+        )}
+
+        {this.state.isLoading ? (
+          <View
+            style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}
+          >
+            <ActivityIndicator size="large" color="blue" />
+          </View>
+        ) : this.state.chargers.length === 0 ? (
+          <View
+            style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}
+          >
+            <Text>No chargers have been assigned to this property....</Text>
+          </View>
+        ) : (
+          <FlatList
+            data={this.state.chargers}
+            renderItem={({ item }) => <ChargerView chargerItem={item} />}
+          />
+        )}
+      </View>
     );
   }
 }

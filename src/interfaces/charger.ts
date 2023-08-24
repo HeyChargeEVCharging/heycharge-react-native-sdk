@@ -34,11 +34,11 @@ export enum ChargerState {
 }
 
 export enum ChargerType {
-  OCPP = "ocpp",
-  SECURE_CHARGE = "secureCharge",
+  OCPP = 'ocpp',
+  SECURE_CHARGE = 'secureCharge',
 }
 
 export enum CommercialModel {
-  INFORMATIONAL = "informational",
-  HC_METER = "hcMeter",
+  INFORMATIONAL = 'informational',
+  HC_METER = 'hcMeter',
 }

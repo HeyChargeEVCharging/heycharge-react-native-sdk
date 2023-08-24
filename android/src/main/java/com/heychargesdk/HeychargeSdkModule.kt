@@ -9,6 +9,7 @@ import com.heycharge.androidsdk.data.ChargingCommandCallback
 import com.heycharge.androidsdk.data.GetDataCallback
 import com.heycharge.androidsdk.data.OTACallback
 import com.heycharge.androidsdk.domain.Charger
+import com.heycharge.androidsdk.domain.Property
 import com.heycharge.androidsdk.domain.Session
 
 class HeychargeSdkModule(
@@ -19,6 +20,7 @@ class HeychargeSdkModule(
 
   private val rnChargersGson = Gson()
   private val sessionsGson = Gson()
+  private val propertiesGson = Gson()
   private val chargersEventName = "Chargers"
   private val sessionsEventName = "Sessions"
   private val otaEventName = "OTA"
@@ -76,7 +78,32 @@ class HeychargeSdkModule(
   }
 
   @ReactMethod
-  fun observeChargers(callback: Callback) {
+  fun getUserProperties(promise: Promise) {
+    ui.post {
+      val propertiesCallback = object : GetDataCallback<List<Property>?> {
+        override fun onGetDataFailure(exception: Exception) {
+          promise.reject(exception)
+        }
+
+        override fun onGetDataSuccess(data: List<Property>?) {
+          val array = Arguments.createArray()
+          if (data != null) {
+            for (prop in data) {
+                  val rnPropertyJson = propertiesGson.toJson(prop, Property::class.java)
+                  array.pushString(rnPropertyJson)
+            }
+            promise.resolve(array)
+          } else {
+            promise.reject(Exception("Could not fetch properties"))
+          }
+        }
+      }
+      HeyChargeSDK.chargers().getUserProperties(propertiesCallback)
+    }
+  }
+
+  @ReactMethod
+  fun observeChargers(propertyId: String, callback: Callback) {
     ui.post {
       removeChargersObserverInternal(callback)
       val chargersCallback = object : GetDataCallback<List<Charger>> {
@@ -100,7 +127,7 @@ class HeychargeSdkModule(
         }
       }
       chargersCallbacks[callback] = chargersCallback
-      HeyChargeSDK.chargers().observeChargers(chargersCallback)
+      HeyChargeSDK.chargers().observeChargers(propertyId,chargersCallback)
     }
   }
 

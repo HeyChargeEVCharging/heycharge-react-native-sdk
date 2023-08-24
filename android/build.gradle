@@ -2,6 +2,7 @@ buildscript {
   // Buildscript is evaluated before everything else so we can't use getExtOrDefault
   def kotlin_version = rootProject.ext.has('kotlinVersion') ? rootProject.ext.get('kotlinVersion') : project.properties['HeychargeSdk_kotlinVersion']
 
+
   repositories {
       google()
       mavenCentral()
@@ -53,9 +54,13 @@ android {
   }
 
   compileOptions {
-    sourceCompatibility JavaVersion.VERSION_1_8
-    targetCompatibility JavaVersion.VERSION_1_8
+    sourceCompatibility JavaVersion.VERSION_11
+    targetCompatibility JavaVersion.VERSION_11
   }
+
+  kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_11.toString()
+    }
 
 }
 
@@ -134,10 +139,11 @@ def kotlin_version = getExtOrDefault('kotlinVersion')
 
 dependencies {
   //noinspection GradleDynamicVersion
-  implementation "com.facebook.react:react-native:+"
+  implementation "com.facebook.react:react-android:+"
   implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
   implementation "com.google.code.gson:gson:2.9.0"
-  implementation 'com.gitlab.heycharge:android-sdk:1.0.2'
+  // implementation 'com.gitlab.heycharge:android-sdk:1.0.2'
+  implementation 'com.heycharge:android-sdk:0.0.0.10'
 // From node_modules
 }
 
