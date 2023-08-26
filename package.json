@@ -1,6 +1,6 @@
 {
   "name": "@heycharge/heycharge-react-native-sdk",
-  "version": "0.2.3",
+  "version": "0.3.0",
   "description": "test",
   "main": "src/index",
   "module": "lib/module/index",
