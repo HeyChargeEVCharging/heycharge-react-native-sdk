@@ -11,6 +11,7 @@ import com.heycharge.androidsdk.data.OTACallback
 import com.heycharge.androidsdk.domain.Charger
 import com.heycharge.androidsdk.domain.Property
 import com.heycharge.androidsdk.domain.Session
+import com.heycharge.androidsdk.domain.enums.HeyChargeRegion
 
 class HeychargeSdkModule(
   private val reactContext: ReactApplicationContext,
@@ -65,8 +66,9 @@ class HeychargeSdkModule(
   }
 
   @ReactMethod
-  fun initialize(sdkKey: String) {
-    HeyChargeSDK.initialize(reactApplicationContext, sdkKey)
+  fun initialize(sdkKey: String,regionEnumValue: Int) {
+    val region = HeyChargeRegion.EU.parse(regionEnumValue)
+    HeyChargeSDK.initialize(reactApplicationContext, sdkKey,region)
     reactApplicationContext.addLifecycleEventListener(this)
   }
 

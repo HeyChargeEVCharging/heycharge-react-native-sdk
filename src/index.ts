@@ -4,7 +4,7 @@ import {
   Platform,
   EmitterSubscription,
 } from 'react-native';
-import type { Charger, RNCharger, RNProperty, Session } from 'src/interfaces';
+import type { Charger, HeyChargeRegion, RNCharger, RNProperty, Session } from 'src/interfaces';
 
 //TODO: check why proxy was causing issues in iOS.
 const LINKING_ERROR =
@@ -23,9 +23,9 @@ const chargersChannel = 'Chargers';
 const sessionsChannel = 'Sessions';
 const otaChannel = 'OTA';
 
-export function initialize(sdkKey: string) {
+export function initialize(sdkKey: string,region: HeyChargeRegion) {
   if (Platform.OS === 'android') {
-    HeychargeSdk.initialize(sdkKey);
+    HeychargeSdk.initialize(sdkKey,region);
   }
   //on iOS, the SDK should be initialized from the AppDelegate in the iOS project.
 }
