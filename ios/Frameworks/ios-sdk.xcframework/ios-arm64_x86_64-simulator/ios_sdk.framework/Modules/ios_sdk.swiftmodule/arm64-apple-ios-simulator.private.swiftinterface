@@ -1,0 +1,243 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.8.1 (swiftlang-5.8.0.124.5 clang-1403.0.22.11.100)
+// swift-module-flags: -target arm64-apple-ios14.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ios_sdk
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import BackgroundTasks
+import Combine
+import CommonCrypto
+import CoreBluetooth
+import CoreFoundation
+import CryptoKit
+import Foundation
+import Swift
+import UIKit
+import _Concurrency
+import _StringProcessing
+@_exported import ios_sdk
+public enum HardwareType : Swift.Int, Swift.Codable {
+  case unknown
+  case accessPoint
+  case scm
+  case smartPlug
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public struct Session : Swift.Identifiable, Swift.Hashable, Swift.Equatable, Swift.Codable {
+  public let id: Swift.String
+  public let chargeAmount: Swift.Double
+  public let chargerName: Swift.String
+  public let endDate: Swift.Int64
+  public let startDate: Swift.Int64
+  public init(id: Swift.String, userId: Swift.String, b2bId: Swift.String?, chargeAmount: Swift.Double, chargerId: Swift.String, chargerName: Swift.String, commercialModel: ios_sdk.CommercialModel?, createdAt: Swift.Int64, deliveryDuration: Swift.Int64, endDate: Swift.Int64, startDate: Swift.Int64, isBilled: Swift.Bool, paymentAmount: Swift.Double, pricing: ios_sdk.ChargerPricing)
+  public func hash(into hasher: inout Swift.Hasher)
+  public static func == (a: ios_sdk.Session, b: ios_sdk.Session) -> Swift.Bool
+  public typealias ID = Swift.String
+  public func encode(to encoder: any Swift.Encoder) throws
+  public var hashValue: Swift.Int {
+    get
+  }
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct Property : Swift.Identifiable, Swift.Hashable, Swift.Equatable, Swift.Codable {
+  public let id: Swift.String
+  public let name: Swift.String
+  public func hash(into hasher: inout Swift.Hasher)
+  public static func == (a: ios_sdk.Property, b: ios_sdk.Property) -> Swift.Bool
+  public typealias ID = Swift.String
+  public func encode(to encoder: any Swift.Encoder) throws
+  public var hashValue: Swift.Int {
+    get
+  }
+  public init(from decoder: any Swift.Decoder) throws
+}
+public enum CommercialModel : Swift.String, Swift.Codable {
+  case informational
+  case hcMeter
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+extension CryptoKit.P256.KeyAgreement.PublicKey : Swift.Equatable {
+  public static func == (lhs: CryptoKit.P256.KeyAgreement.PublicKey, rhs: CryptoKit.P256.KeyAgreement.PublicKey) -> Swift.Bool
+}
+@_hasMissingDesignatedInitializers final public class SessionSDK {
+  final public func observeSessions(startDateInMillis: Swift.Int, receiveCompletion: @escaping ((Combine.Subscribers.Completion<ios_sdk.SDKError>) -> Swift.Void), receiveValue: @escaping (([ios_sdk.Session]) -> Swift.Void)) -> Combine.AnyCancellable?
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class MessagesSDK {
+  @objc deinit
+}
+public enum HeyChargeRegion : Swift.Int, Swift.Codable {
+  case eu
+  case us
+  public init(_ value: Swift.Int)
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public struct ChargerPricing : Swift.Hashable, Swift.Equatable, Swift.Codable {
+  public let driverPrice: Swift.Double
+  public init(driverPrice: Swift.Double, heychargeMargin: Swift.Double, propertyMargin: Swift.Double, utilityPrice: Swift.Double)
+  public func hash(into hasher: inout Swift.Hasher)
+  public static func == (a: ios_sdk.ChargerPricing, b: ios_sdk.ChargerPricing) -> Swift.Bool
+  public func encode(to encoder: any Swift.Encoder) throws
+  public var hashValue: Swift.Int {
+    get
+  }
+  public init(from decoder: any Swift.Decoder) throws
+}
+public enum PendingMessagesState : Swift.Int, Swift.Codable {
+  case empty
+  case pending
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum ChargerType : Swift.String, Swift.Codable {
+  case ocpp
+  case secureCharge
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct Charger : Swift.Identifiable, Swift.Hashable, Swift.Equatable, Swift.Codable {
+  public let id: Swift.String
+  public let name: Swift.String
+  public let address: Swift.String
+  public let pricing: ios_sdk.ChargerPricing
+  public let bluetoothStatus: ios_sdk.ChargerState?
+  public init(id: Swift.String, name: Swift.String, b2bId: Swift.String, address: Swift.String, connectors: [ios_sdk.ChargerConnector], chargePoint: ios_sdk.ChargePoint, type: ios_sdk.ChargerType, pricing: ios_sdk.ChargerPricing, authorizedUsers: [Swift.String]? = nil, propertyId: Swift.String? = nil, onboarded: Swift.Bool? = nil, bluetoothChargerId: Swift.String? = nil, publicKey: Swift.String? = nil, userIdHash: Foundation.Data? = nil, otaUpdateUserId: Swift.String? = nil, bluetoothStatus: ios_sdk.ChargerState? = nil, commercialModel: ios_sdk.CommercialModel? = nil, hardwareVersion: Swift.String? = nil, pendingMessageState: ios_sdk.PendingMessagesState? = nil, readyForChargerActions: Swift.Bool? = nil, readyForOta: Swift.Bool? = nil, shouldSyncTime: Swift.Bool = true)
+  public func hash(into hasher: inout Swift.Hasher)
+  public static func == (a: ios_sdk.Charger, b: ios_sdk.Charger) -> Swift.Bool
+  public typealias ID = Swift.String
+  public func encode(to encoder: any Swift.Encoder) throws
+  public var hashValue: Swift.Int {
+    get
+  }
+  public init(from decoder: any Swift.Decoder) throws
+}
+@_hasMissingDesignatedInitializers final public class UserSDK {
+  @objc deinit
+}
+public struct ChargerConnector : Swift.Identifiable, Swift.Hashable, Swift.Equatable, Swift.Codable {
+  public let id: Swift.Int
+  public func hash(into hasher: inout Swift.Hasher)
+  public static func == (a: ios_sdk.ChargerConnector, b: ios_sdk.ChargerConnector) -> Swift.Bool
+  public typealias ID = Swift.Int
+  public func encode(to encoder: any Swift.Encoder) throws
+  public var hashValue: Swift.Int {
+    get
+  }
+  public init(from decoder: any Swift.Decoder) throws
+}
+@_hasMissingDesignatedInitializers final public class HeyChargeSDK {
+  public static func initialize(sdkKey: Swift.String, region: ios_sdk.HeyChargeRegion) throws
+  public static func setUserId(userId: Swift.String)
+  public static func chargers() -> ios_sdk.ChargerSDK
+  public static func users() -> ios_sdk.UserSDK
+  public static func sessions() -> ios_sdk.SessionSDK
+  public static func applicationWillEnterForeground()
+  public static func applicationDidEnterBackground()
+  public static func dispose()
+  @objc deinit
+}
+public struct ChargePoint : Swift.Hashable, Swift.Equatable, Swift.Codable {
+  public init(firmwareVersion: Swift.String, hardwareType: ios_sdk.HardwareType? = nil, model: Swift.String? = nil, serialNumber: Swift.String, vendor: Swift.String)
+  public func hash(into hasher: inout Swift.Hasher)
+  public static func == (a: ios_sdk.ChargePoint, b: ios_sdk.ChargePoint) -> Swift.Bool
+  public func encode(to encoder: any Swift.Encoder) throws
+  public var hashValue: Swift.Int {
+    get
+  }
+  public init(from decoder: any Swift.Decoder) throws
+}
+@_hasMissingDesignatedInitializers final public class ChargerSDK {
+  #if compiler(>=5.3) && $AsyncAwait
+  final public func getUserProperties() async -> [ios_sdk.Property]?
+  #endif
+  final public func initializeChargers(propertyId: Swift.String)
+  final public func observeChargers(receiveCompletion: @escaping ((Combine.Subscribers.Completion<ios_sdk.SDKError>) -> Swift.Void), receiveValue: @escaping (([ios_sdk.Charger]) -> Swift.Void)) -> Combine.AnyCancellable?
+  final public func isChargerAvailable(charger: ios_sdk.Charger) -> Swift.Bool
+  final public func isChargerRequiresSetup(charger: ios_sdk.Charger) -> Swift.Bool
+  final public func isChargingByUser(charger: ios_sdk.Charger) -> Swift.Bool
+  final public func isChargerUpdateAvailable(charger: ios_sdk.Charger) -> Swift.Bool
+  final public func isChargerBusy(charger: ios_sdk.Charger) -> Swift.Bool
+  final public func startCharging(charger: ios_sdk.Charger, onChargingCommandExecuted: @escaping () -> Swift.Void, onChargingCommandFailure: @escaping (ios_sdk.SDKError) -> Swift.Void)
+  final public func stopCharging(charger: ios_sdk.Charger, onChargingCommandExecuted: @escaping () -> Swift.Void, onChargingCommandFailure: @escaping (ios_sdk.SDKError) -> Swift.Void)
+  final public func startOnboarding(charger: ios_sdk.Charger, onChargingCommandExecuted: @escaping () -> Swift.Void, onChargingCommandFailure: @escaping (ios_sdk.SDKError) -> Swift.Void)
+  final public func reboot(charger: ios_sdk.Charger, onChargingCommandExecuted: @escaping () -> Swift.Void, onChargingCommandFailure: @escaping (ios_sdk.SDKError) -> Swift.Void)
+  final public func startOtaUpdate(charger: ios_sdk.Charger, otaCallbackOnError: @escaping (ios_sdk.SDKError) -> Swift.Void, otaCallbackOnUpdateFinished: @escaping () -> Swift.Void, otaCallbackOnProgressUpdated: @escaping (Swift.Int) -> Swift.Void)
+  @objc deinit
+}
+public enum SDKError : Swift.Error {
+  case requestFailed
+  case invalidToken
+  case sdksNotInitialized
+  case userIdIsNotSet
+  case userIsNull
+  case somethingWentWrong
+  case needInternetConnection
+  case deviceNotConnected
+  case deviceStateHaveNotChanged
+  case chargerShouldBeInIdleState
+  case chargerShouldBeInChargingState
+  case notAllowedToStopOtherUserSession
+  case chargerShouldNotBeOnboarded
+  case firmwareFilesNotFetchedYet
+  case chargerShouldBeInOtaOrIdleState
+  public static func == (a: ios_sdk.SDKError, b: ios_sdk.SDKError) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum ChargerState : Swift.Int, Swift.Codable {
+  case unknown
+  case notOnboarded
+  case onboarding
+  case idle
+  case chargingInitiated
+  case charging
+  case chargingStopped
+  case fatalError
+  case boot
+  case chargingStopInitiated
+  case hostOta
+  case ota
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension ios_sdk.HardwareType : Swift.Equatable {}
+extension ios_sdk.HardwareType : Swift.Hashable {}
+extension ios_sdk.HardwareType : Swift.RawRepresentable {}
+extension ios_sdk.CommercialModel : Swift.Equatable {}
+extension ios_sdk.CommercialModel : Swift.Hashable {}
+extension ios_sdk.CommercialModel : Swift.RawRepresentable {}
+extension ios_sdk.HeyChargeRegion : Swift.Equatable {}
+extension ios_sdk.HeyChargeRegion : Swift.Hashable {}
+extension ios_sdk.HeyChargeRegion : Swift.RawRepresentable {}
+extension ios_sdk.PendingMessagesState : Swift.Equatable {}
+extension ios_sdk.PendingMessagesState : Swift.Hashable {}
+extension ios_sdk.PendingMessagesState : Swift.RawRepresentable {}
+extension ios_sdk.ChargerType : Swift.Equatable {}
+extension ios_sdk.ChargerType : Swift.Hashable {}
+extension ios_sdk.ChargerType : Swift.RawRepresentable {}
+extension ios_sdk.SDKError : Swift.Equatable {}
+extension ios_sdk.SDKError : Swift.Hashable {}
+extension ios_sdk.ChargerState : Swift.Equatable {}
+extension ios_sdk.ChargerState : Swift.Hashable {}
+extension ios_sdk.ChargerState : Swift.RawRepresentable {}
