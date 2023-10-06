@@ -12,7 +12,6 @@
 
 @interface RCT_EXTERN_MODULE(HeychargeSdk, RCTEventEmitter)
 
-RCT_EXTERN_METHOD(initialize:(NSString *)sdkKey)
 RCT_EXTERN_METHOD(setUserId:(NSString *)userId)
 RCT_EXTERN_METHOD(initializeChargers:(NSString *)propertyId)
 RCT_EXTERN_METHOD(getUserProperties:(RCTPromiseResolveBlock)resolve reject:(RCTPromiseRejectBlock)reject)
