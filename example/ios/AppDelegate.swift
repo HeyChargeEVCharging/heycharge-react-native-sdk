@@ -15,9 +15,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   var bridge: RCTBridge!
   
   //dev
-  // private let testSdkKey = "hc_sdk_KTrCsT64MbSBECjDejVNVKgu35n9t99G"
+  private let testSdkKey = "hc_sdk_KTrCsT64MbSBECjDejVNVKgu35n9t99G"
   //prod
-  private let testSdkKey = "hc_sdk_399zzFUHpP6E6IWGcbbnR4st"
+  // private let testSdkKey = "hc_sdk_399zzFUHpP6E6IWGcbbnR4st"
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     let jsCodeLocation: URL
@@ -31,7 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     self.window?.makeKeyAndVisible()
     
     //initializing HeyChargeSDK
-    HeyChargeSDK.initialize(sdkKey: testSdkKey)
+    try? HeyChargeSDK.initialize(sdkKey: testSdkKey,region: HeyChargeRegion.us)
 
     return true
   }

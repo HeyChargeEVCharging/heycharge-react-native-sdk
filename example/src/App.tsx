@@ -4,7 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import LoginScreen from './login';
 import HomeScreen from './home';
-import { HeyChargeRegion } from 'heycharge-sdk';
+import { HeyChargeRegion } from '@heycharge/heycharge-react-native-sdk';
 
 // dev
 const testSdkKey = 'hc_sdk_KTrCsT64MbSBECjDejVNVKgu35n9t99G';

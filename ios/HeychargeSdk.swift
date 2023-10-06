@@ -21,10 +21,6 @@ class HeychargeSdk: RCTEventEmitter {
     private func emit(eventName: String, body: Any? = nil) {
         EventEmitter.shared.emit(eventName: eventName, body: body)
     }
-
-    @objc func initialize(_ sdkKey: String) -> Void {
-        HeyChargeSDK.initialize(sdkKey: sdkKey)
-    }
     
     @objc func setUserId(_ userId: String) -> Void {
         HeyChargeSDK.setUserId(userId: userId)
