@@ -1,7 +1,7 @@
 framework module ios_sdk {
   umbrella header "ios_sdk.h"
-
   export *
+
   module * { export * }
 }
 
