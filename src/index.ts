@@ -2,8 +2,8 @@ import {
   NativeModules,
   NativeEventEmitter,
   Platform,
-  EmitterSubscription,
 } from 'react-native';
+import type { EmitterSubscription } from 'react-native';
 import type { Charger, HeyChargeRegion, RNCharger, RNProperty, Session } from 'src/interfaces';
 
 //TODO: check why proxy was causing issues in iOS.

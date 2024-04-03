@@ -142,7 +142,7 @@ dependencies {
   implementation "com.facebook.react:react-android:+"
   implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
   implementation "com.google.code.gson:gson:2.9.0"
-  implementation 'com.gitlab.heycharge:android-sdk:1.0.6'
+  implementation 'com.gitlab.heycharge:android-sdk:1.0.8'
 // From node_modules
 }
 
